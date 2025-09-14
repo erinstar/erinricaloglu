@@ -1,20 +1,123 @@
-<div class="section">
-  <h1>Selected Projects</h1>
-  <p>Most of my code and project work is available on my <a href="https://github.com/erinstar">GitHub profile</a>. Here are a few highlights:</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects — Erin Ricaloglu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg1:#fdfbfb; --bg2:#f3e7e9;
+      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
+      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--ink); line-height:1.7;
+    }
+    header{
+      position:sticky; top:0; z-index:10;
+      background:#fff0f5cc; backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:1000px; margin:auto;
+      display:flex; align-items:center; gap:24px;
+      padding:14px 20px;
+    }
+    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
+    .nav a:hover{ color:var(--accent-2) }
+    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
 
-<div class="section">
-  <h2>Neuroimmune Modulation of SSRI Response</h2>
-  <p>Poster project at CAMH studying postpartum depression and the interaction between inflammation and antidepressant response.</p>
-</div>
+    main{ max-width:900px; margin:40px auto; padding:0 20px }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+      padding:24px; margin-bottom:26px;
+    }
+    h1,h2{ margin:0 0 10px; color:var(--accent) }
+    p{ margin:8px 0 }
+    ul{ padding-left:20px; margin:0 }
+    li{ margin-bottom:18px }
+    .pill{
+      display:inline-block; padding:8px 14px; margin:6px 8px 0 0;
+      background:var(--pill); border-radius:999px; color:var(--accent);
+      text-decoration:none; font-size:.9rem;
+    }
+    .muted{ color:var(--sub) }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <strong>Erin Ricaloglu</strong>
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="volunteering.html">Volunteering</a>
+      <a href="projects.html">Projects</a>
+      <span class="spacer">University of Toronto</span>
+    </nav>
+  </header>
 
-<div class="section">
-  <h2>Metacommunity Modelling (Honours Thesis)</h2>
-  <p>Developed agent-based simulations of biodiversity dynamics in fragmented habitats. Code and analysis available on <a href="https://github.com/erinstar">GitHub</a>.</p>
-</div>
+  <main>
+    <div class="section">
+      <h1>Projects</h1>
+      <p>This page highlights selected academic research and communication projects. For code and data pipelines, see my <a href="https://github.com/erinstar" target="_blank">GitHub</a> ✿</p>
+    </div>
 
+    <div class="section">
+      <h2>Doctoral Research</h2>
+      <ul>
+        <li><strong>Epigenetic Regulation of Memory</strong> — University of Toronto (2025– )  
+          <p>PhD project exploring how histone variant exchange and chromatin remodeling shape memory-associated gene expression. Uses rodent behavioural models, molecular assays, and genomic tools to investigate mechanisms relevant to Alzheimer’s disease.</p>
+        </li>
+        <li><strong>Lysosomal Biology & Neurodegeneration</strong>  
+          <p>Investigating how lysosome abundance and function interact with synaptic plasticity and cognition. Integrates molecular neuroscience and cellular clearance pathways.</p>
+        </li>
+      </ul>
+    </div>
 
-<div class="section">
-  <h2>Science Communication & Outreach</h2>
-  <p>Public talks, , public talks, and science outreach programs delivered through Let’s Talk Science and Sci High. More details in the <a href="teaching.html">Teaching & Outreach page</a>.</p>
-</div>
+    <div class="section">
+      <h2>Undergraduate & Fellowship Research</h2>
+      <ul>
+        <li><strong>Postpartum Depression & Neuroinflammation</strong> — CAMH (2025)  
+          <p>Studied behavioural and neural changes in rodent models of postpartum depression. Combined pharmacological interventions (SSRIs, cytokine blockade) with behavioural assays. Results presented as a poster at CAMH conference.</p>
+        </li>
+        <li><strong>Metacommunity Biodiversity Models</strong> — McMaster University (2024–2025)  
+          <p>Built agent-based models in NetLogo and Python to test how patch size and connectivity influence biodiversity. Presented findings at Ontario Biology Day, McMaster Symposium, and WISE Conference.</p>
+          <a class="pill" href="https://github.com/erinstar">Code on GitHub</a>
+        </li>
+        <li><strong>Arabidopsis Immunity</strong> — McMaster University (2023–2024)  
+          <p>Supported research on systemic acquired resistance and age-related resistance. Gained lab skills in RNA extraction, PCR, and pathogen assays.</p>
+        </li>
+        <li><strong>Amphibian Conservation</strong> — Operation Wallacea, Honduras (2023)  
+          <p>Conducted amphibian biodiversity surveys and chytrid fungal surveillance in cloud forest ecosystems. Authored a report on fungal emergence threats to amphibian fauna.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Science Communication Projects</h2>
+      <ul>
+        <li><strong>Women’s Health Research Cluster</strong> (2024–2025)  
+          <p>Created infographics, blog posts, and social media campaigns on equity issues in women’s health and reproductive justice. Supported knowledge mobilization to broader audiences.</p>
+        </li>
+        <li><strong>Let’s Talk Science Outreach</strong> (2025– )  
+          <p>Organized and led large-scale STEM outreach events, including <em>Science Rendezvous</em> and <em>Let’s Talk Science Challenge</em>. Designed hands-on STEM demos for K–12 classrooms and communities.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Get in touch</h2>
+      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
+      <p class="muted">Personal: <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
+    </div>
+  </main>
+</body>
+</html>
