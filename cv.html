@@ -5,77 +5,52 @@
   <title>CV — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, #fdfbfb, #f3e7e9);
-      color: #333;
-      line-height: 1.7;
+    :root{
+      --bg1:#fdfbfb; --bg2:#f3e7e9;
+      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
+      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
     }
-    header {
-      position: sticky;
-      top: 0;
-      background: #fff0f5cc;
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e5cfe2;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--ink); line-height:1.7;
     }
-    .nav {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 14px 20px;
+    header{
+      position:sticky; top:0; z-index:10;
+      background:#fff0f5cc; backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
     }
-    .nav a {
-      color: #6a4c93;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
+    .nav{
+      max-width:1000px; margin:auto;
+      display:flex; align-items:center; gap:24px;
+      padding:14px 20px;
     }
-    .nav a:hover {
-      color: #d45d79;
+    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
+    .nav a:hover{ color:var(--accent-2) }
+    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
+    main{ max-width:850px; margin:40px auto; padding:0 20px }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+      padding:24px; margin-bottom:26px;
     }
-    main {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
+    h1,h2{ margin:0 0 10px; color:var(--accent) }
+    ul{ padding-left:20px; margin:0 }
+    li{ margin-bottom:10px }
+    .pill{
+      display:inline-block;
+      padding:8px 14px;
+      margin:6px 8px 0 0;
+      background:var(--pill);
+      border-radius:999px;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:.9rem;
     }
-    .section {
-      background: #ffffffdd;
-      border: 1px solid #e8d6eb;
-      border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 24px;
-      margin-bottom: 26px;
-    }
-    h1, h2 {
-      margin-top: 0;
-      color: #6a4c93;
-    }
-    ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .note {
-      font-size: 0.9rem;
-      color: #555;
-      text-align: right;
-      font-style: italic;
-    }
-    .pill {
-      display: inline-block;
-      padding: 6px 12px;
-      background: #fce7f3;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin: 6px 6px 0 0;
-      color: #6a4c93;
-      text-decoration: none;
-    }
+    .note{ font-size:.9rem; color:var(--sub); text-align:right; font-style:italic }
   </style>
 </head>
 <body>
@@ -88,15 +63,17 @@
       <a href="outreach.html">Outreach</a>
       <a href="volunteering.html">Volunteering</a>
       <a href="projects.html">Projects</a>
+      <span class="spacer">University of Toronto</span>
     </nav>
   </header>
 
   <main>
     <div class="section">
       <h1>Curriculum Vitae</h1>
-      <p>Below is a summary of my academic background, research experience, and skills. 
-      A full PDF version of my CV can be provided upon request ✿</p>
-      <a class="pill" href="mailto:erin.ricaloglu@gmail.com">Request PDF CV</a>
+      <p>This page summarizes my academic background, research, teaching, and skills. 
+      A full PDF version is available upon request ✿</p>
+      <a class="pill" href="mailto:erin.ricaloglu@mail.utoronto.ca">UToronto email</a>
+      <a class="pill" href="mailto:erin.ricaloglu@gmail.com">Personal email</a>
       <a class="pill" href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a>
       <a class="pill" href="https://github.com/erinstar">GitHub</a>
     </div>
@@ -105,9 +82,9 @@
       <h2>Education</h2>
       <ul>
         <li><strong>PhD, Behavioural Neuroscience</strong> — University of Toronto (2025–2030, in progress).  
-        Supervisor: Dr. Iva Zovkic. Research focuses on histone variant exchange and lysosomal regulation in Alzheimer’s disease models. Integrates molecular biology, epigenetics, and behavioural neuroscience.</li>
+        Supervisor: Dr. Iva Zovkic. Focus on histone variant exchange, chromatin remodeling, lysosomal biology, and their roles in memory and Alzheimer’s disease.</li>
         <li><strong>BSc (Honours) Biology, Minor in Sociology</strong> — McMaster University (2021–2025).  
-        Dean’s Honour List. Thesis on metacommunity dynamics in fragmented landscapes using computational modelling. Exchange term at University of Copenhagen (ancient proteomics).</li>
+        Dean’s Honour List. Honours thesis: computational models of biodiversity in fragmented landscapes. Exchange term at the University of Copenhagen (Ancient Proteomics, 2023).</li>
       </ul>
     </div>
 
@@ -115,34 +92,34 @@
       <h2>Research Experience</h2>
       <ul>
         <li><strong>Doctoral Researcher</strong>, University of Toronto (2025– )  
-        Designing rodent behavioural experiments combined with molecular and genomic assays to study chromatin regulation of memory and cognition.</li>
+        Design and implement behavioural assays in rodent models, combined with molecular and genomic tools to study chromatin regulation of cognition and memory.</li>
         <li><strong>Research Fellow</strong>, CAMH (2025)  
-        Independent project on postpartum depression. Conducted behavioural assays (FST, maternal care paradigms) and immunohistochemistry. Presented findings in a poster at CAMH conference.</li>
-        <li><strong>Honours Thesis Researcher</strong>, McMaster (2024–2025)  
-        Developed agent-based biodiversity models using NetLogo and Python. Presented at three conferences (Ontario Biology Day, McMaster Symposium, WISE Conference).</li>
-        <li><strong>Undergraduate Research Assistant</strong>, McMaster (2023–2024)  
-        Supported Arabidopsis immunity project (RNA isolation, PCR, pathogen inoculations). Contributed to studies on systemic acquired resistance.</li>
+        Conducted independent project on postpartum depression using rodent models. Designed experiments, ran FST and maternal behaviour assays, performed immunohistochemistry. Presented poster at CAMH conference.</li>
+        <li><strong>Honours Thesis Researcher</strong>, McMaster University (2024–2025)  
+        Developed agent-based models of biodiversity persistence in fragmented landscapes (NetLogo, Python). Presented findings at Ontario Biology Day, McMaster Symposium, and WISE Conference.</li>
+        <li><strong>Undergraduate Research Assistant</strong>, McMaster University (2023–2024)  
+        Contributed to Arabidopsis immunity project. Performed RNA extraction, PCR, and pathogen inoculation experiments to study systemic acquired resistance.</li>
         <li><strong>Field Researcher</strong>, Operation Wallacea, Honduras (2023)  
-        Conducted amphibian biodiversity surveys and chytrid fungal surveillance in cloud forest ecosystems. Authored report on fungal emergence threats.</li>
+        Conducted amphibian biodiversity surveys and chytrid fungal surveillance in cloud forests. Authored report on chytrid emergence and threats to amphibians.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Teaching & Leadership</h2>
       <ul>
-        <li><strong>Teaching Assistant</strong>, University of Toronto (2025– ) — tutorials, labs, and assessment support in psychology and neuroscience courses.</li>
-        <li><strong>Outreach Coordinator</strong>, Let’s Talk Science — led STEM outreach programs across the GTA; trained and mentored student volunteers; coordinated flagship events with 200+ youth participants.</li>
-        <li><strong>Graduate Communicator</strong>, Sci High — delivered neuroscience and biomedical research talks in high school classrooms across Toronto.</li>
+        <li><strong>Teaching Assistant & Invigilator</strong>, University of Toronto (2025– ) — tutorials, labs, grading, and exam support for PSY344 (Forensic Psych), PSY393 (Neuropsychology), PSY280 (Sensation & Perception), and PSY387 (Psychology of Music).</li>
+        <li><strong>Outreach Coordinator</strong>, Let’s Talk Science (2025– ) — organize STEM programs for 20+ schools/communities; train and mentor 100+ volunteers; coordinate Science Rendezvous and Let’s Talk Science Challenge events reaching 200+ youth annually.</li>
+        <li><strong>Graduate Communicator</strong>, Sci High (2025) — delivered engaging neuroscience and biomedical research talks in high school classrooms across the GTA, promoting equity in STEM pathways.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Awards & Recognition</h2>
       <ul>
-        <li>BioTalent Canada Student Award — 2025</li>
+        <li>BioTalent Canada Student Award (2025)</li>
         <li>Undergraduate Research Travel Award — McMaster University (2025)</li>
-        <li>Dean’s Honour List — McMaster University (multiple years)</li>
-        <li>Global Experience Award — University of Copenhagen exchange (2023)</li>
+        <li>Dean’s Honour List (multiple years)</li>
+        <li>Global Experience Award — University of Copenhagen Exchange (2023)</li>
       </ul>
     </div>
 
@@ -150,13 +127,16 @@
       <h2>Skills</h2>
       <ul>
         <li><strong>Experimental:</strong> PCR, RNA/DNA extraction, immunohistochemistry, rodent behavioural assays, microscopy</li>
-        <li><strong>Computational:</strong> Python, R, NetLogo, data visualization, bioinformatics basics (scRNA-seq training)</li>
-        <li><strong>Professional:</strong> teaching, mentoring, program coordination, science communication</li>
+        <li><strong>Computational:</strong> Python, R, NetLogo, data visualization, basic bioinformatics (e.g. scRNA-seq training)</li>
+        <li><strong>Professional:</strong> teaching, mentoring, program coordination, science communication, outreach leadership</li>
       </ul>
     </div>
 
     <div class="note">
-      ✦ For a full CV with additional details (conference presentations, publications, and training), please <a href="mailto:erin.ricaloglu@gmail.com">contact me</a>.
+      ✦ Full CV (PDF) available — email me at 
+      <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a> 
+      or 
+      <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a>.
     </div>
   </main>
 </body>
