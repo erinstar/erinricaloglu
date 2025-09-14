@@ -6,19 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root{--bg:#0f172a;--fg:#e5e7eb;--muted:#94a3b8;--link:#60a5fa;--card:#111827;--line:#1f2937;}
-    *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,#0b1220,#0f172a);color:var(--fg)}
     header{position:sticky;top:0;background:#0b1220cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
     .nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
     .nav a{color:var(--fg);text-decoration:none;opacity:.9} .nav a:hover{color:var(--link)}
     .nav .spacer{margin-left:auto;color:var(--muted);font-size:.95rem}
-    main{max-width:1100px;margin:40px auto;padding:0 20px}
-    .grid{display:grid;grid-template-columns:280px 1fr;gap:28px} @media(max-width:880px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-    h1{margin:0 0 8px} h2{margin:22px 0 10px} p{line-height:1.7;margin:8px 0}
-    .tags span{display:inline-block;padding:6px 10px;margin:4px 6px 0 0;background:#1f2937;border-radius:999px;font-size:.85rem}
-    .links a{display:inline-block;margin-right:12px;color:var(--link)}
-    img.avatar{width:100%;border-radius:12px;margin-bottom:12px}
+    main{max-width:900px;margin:40px auto;padding:0 20px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:22px}
+    h1{margin:0 0 8px} p{line-height:1.7}
+    .links a{margin-right:14px;color:var(--link)}
   </style>
 </head>
 <body>
@@ -33,34 +29,23 @@
     </nav>
   </header>
 
-  <main class="grid">
-    <aside class="card">
-      <img src="profile.jpg" alt="Erin Ricaloglu" class="avatar" />
-      <h2 style="margin-top:0">Researcher & PhD Student</h2>
-      <p>Behavioural Neuroscience, University of Toronto.</p>
-      <div class="tags">
-        <span>neuroepigenetics</span><span>memory</span><span>chromatin</span><span>science communication</span>
-      </div>
-      <div class="links" style="margin-top:10px">
-        <a href="mailto:erin.ricaloglu@gmail.com">Email</a>
+  <main>
+    <div class="card">
+      <h1>Welcome</h1>
+      <p>I am a PhD student in Behavioural Neuroscience at the University of Toronto. 
+      My research interests focus on neuroepigenetics, chromatin biology, and the molecular foundations of memory and cognition.</p>
+
+      <p>Outside of the lab, I am passionate about teaching, mentorship, and public engagement in science. 
+      This site collects my CV, teaching experience, outreach activities, and links to ongoing projects on GitHub.</p>
+
+      <div class="links">
+        <a href="cv.html">View CV</a>
+        <a href="teaching.html">Teaching & Outreach</a>
+        <a href="projects.html">Research Projects</a>
         <a href="https://github.com/erinstar">GitHub</a>
         <a href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a>
       </div>
-    </aside>
-
-    <section class="card">
-      <h1>Hi — I’m Erin</h1>
-      <p>I’m a PhD student in Behavioural Neuroscience at the University of Toronto. I’m broadly interested in how molecular mechanisms relate to cognition and behaviour, and I care a lot about making science inviting and useful.</p>
-
-      <p>This site hosts a short CV, teaching & outreach info, and a few projects. Thanks for visiting!</p>
-
-      <h2>Quick links</h2>
-      <ul>
-        <li><a href="cv.html">Curriculum Vitae</a></li>
-        <li><a href="teaching.html">Teaching & outreach</a></li>
-        <li><a href="projects.html">Selected projects</a></li>
-      </ul>
-    </section>
+    </div>
   </main>
 </body>
 </html>
