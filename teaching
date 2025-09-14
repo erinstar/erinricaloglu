@@ -1,22 +1,80 @@
-<div class="section">
-  <h1>Teaching</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teaching — Erin Ricaloglu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg1:#fdfbfb; --bg2:#f3e7e9;
+      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
+      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--ink);line-height:1.7}
+    header{position:sticky;top:0;background:#fff0f5cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1000px;margin:auto;display:flex;align-items:center;gap:24px;padding:14px 20px}
+    .nav a{color:var(--accent);text-decoration:none;font-weight:500;transition:.15s}
+    .nav a:hover{color:var(--accent-2)}
+    .spacer{margin-left:auto;color:#a78bfa;font-size:.95rem}
+    main{max-width:900px;margin:40px auto;padding:0 20px}
+    .section{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 12px rgba(0,0,0,.05);padding:24px;margin-bottom:26px}
+    h1,h2{margin:0 0 10px;color:var(--accent)}
+    ul{padding-left:20px;margin:0}
+    li{margin-bottom:10px}
+    .note{font-size:.9rem;color:var(--sub);text-align:right;font-style:italic}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <strong>Erin Ricaloglu</strong>
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="volunteering.html">Volunteering</a>
+      <a href="projects.html">Projects</a>
+      <span class="spacer">University of Toronto</span>
+    </nav>
+  </header>
 
-<div class="section">
-  <h2>Teaching Assistant & Invigilator</h2>
-  <p>University of Toronto Mississauga (2025–present). Tutorials, labs, and exam support for psychology and neuroscience courses:</p>
-  <ul>
-    <li>PSY344 — Forensic Psychology</li>
-    <li>PSY393 — Human Neuropsychology</li>
-    <li>PSY280 — Sensation & Perception</li>
-    <li>PSY387 — Psychology of Music</li>
-  </ul>
-</div>
+  <main>
+    <div class="section">
+      <h1>Teaching</h1>
+      <p>I believe in inclusive, hands-on teaching that makes abstract concepts approachable and connected to real-world applications. I aim to foster curiosity and confidence in every student, whether in tutorials, labs, or one-on-one mentorship.</p>
+    </div>
 
-<div class="section">
-  <h2>Mentorship</h2>
-  <ul>
-    <li><strong>Graduate Judge</strong>, STAR Program — evaluated undergraduate posters for clarity, analysis, and presentation.</li>
-    <li><strong>STEM Mentor</strong>, Letters to a Pre-Scientist — long-term mentorship of middle school students through pen-pal exchanges.</li>
-  </ul>
-</div>
+    <div class="section">
+      <h2>Teaching Assistant & Invigilator</h2>
+      <p><strong>University of Toronto Mississauga (2025–present)</strong></p>
+      <p>Supported undergraduate student learning by preparing and delivering tutorials, facilitating lab activities, and assisting with exam invigilation. Courses include:</p>
+      <ul>
+        <li>PSY344 — Forensic Psychology</li>
+        <li>PSY393 — Human Neuropsychology</li>
+        <li>PSY280 — Sensation & Perception</li>
+        <li>PSY387 — Psychology of Music</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Mentorship</h2>
+      <ul>
+        <li><strong>Graduate Judge</strong>, STAR Program (2025) — Evaluated undergraduate research posters, providing constructive feedback on clarity, analysis, and presentation skills.</li>
+        <li><strong>STEM Mentor</strong>, Letters to a Pre-Scientist (2024– ) — Long-term pen-pal mentorship with middle school students in underserved communities, encouraging representation and confidence in STEM pathways.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Teaching Philosophy</h2>
+      <p>I strive to create learning environments where students feel both supported and challenged. My approach integrates active learning, collaborative discussion, and real-world connections, ensuring that students leave with both conceptual knowledge and practical skills.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
+      <p class="note">Always happy to connect with students, collaborators, and educators ✿</p>
+    </div>
+  </main>
+</body>
+</html>
