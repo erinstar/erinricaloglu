@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Erin Ricaloglu</title>
+  <meta charset="UTF-8" />
+  <title>Erin Ricaloglu — Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-    header {
-      background: #2c3e50;
-      padding: 10px 20px;
-    }
-    header h1 {
-      color: white;
-      display: inline;
-      margin-right: 30px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 6px;
-      padding: 30px;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-top: 1.5em;
-    }
+    :root{--bg:#0f172a;--fg:#e5e7eb;--link:#60a5fa;--card:#111827;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:linear-gradient(180deg,#0b1220,#0f172a);}
+    header{position:sticky;top:0;background:#0b1220aa;backdrop-filter:blur(8px);border-bottom:1px solid #1f2937}
+    .nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px;color:var(--fg)}
+    .nav a{color:var(--fg);text-decoration:none;opacity:.9} .nav a:hover{color:var(--link)}
+    main{max-width:1100px;margin:40px auto;padding:0 20px;color:var(--fg)}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:28px} @media(max-width:880px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:18px}
+    h1{margin:0 0 6px} h2{margin:22px 0 10px} p{line-height:1.7}
+    .tags span{display:inline-block;padding:4px 10px;margin:4px;background:#1f2937;border-radius:999px;font-size:.85rem}
+    .icons a{display:inline-block;margin-right:10px}
   </style>
 </head>
 <body>
   <header>
-    <h1>Erin Ricaloglu</h1>
-    <nav>
+    <nav class="nav">
+      <strong>Erin Ricaloglu</strong>
       <a href="index.html">About</a>
       <a href="cv.html">CV</a>
       <a href="teaching.html">Teaching</a>
       <a href="projects.html">Projects</a>
+      <span style="margin-left:auto;opacity:.75">Toronto, ON</span>
     </nav>
   </header>
 
-  <main>
-    <h2>Welcome!</h2>
-    <p>I am a PhD student in Psychology at the University of Toronto, 
-    researching epigenetics, chromatin regulation, and memory. 
-    This website collects my academic notes, outreach work, and projects.</p>
-    
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Epigenetic regulation of memory</li>
-      <li>Histone variants and chromatin remodeling</li>
-      <li>Neurobiology of stress and cognition</li>
-    </ul>
-    
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:erin@example.com">erin@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/erinricaloglu">github.com/erinricaloglu</a></p>
+  <main class="grid">
+    <aside class="card">
+      <img src="profile.jpg" alt="Erin Ricaloglu" style="width:100%;border-radius:12px;margin-bottom:12px"/>
+      <h2 style="margin-top:0">Researcher & PhD Student</h2>
+      <p>PhD student in Behavioural Neuroscience at the University of Toronto.</p>
+      <div class="tags">
+        <span>neuroepigenetics</span><span>memory</span><span>chromatin</span><span>science communication</span>
+      </div>
+      <div class="icons" style="margin-top:10px">
+        <a href="mailto:erin.ricaloglu@gmail.com">Email</a>
+        <a href="https://github.com/erinricaloglu">GitHub</a>
+        <a href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a>
+      </div>
+    </aside>
+
+    <section class="card">
+      <h1>Welcome!</h1>
+      <p>I am a PhD student in Behavioural Neuroscience at the University of Toronto.  
+      My academic interests span neuroepigenetics, chromatin biology, and how molecular changes shape cognition and behaviour.</p>
+
+      <p>I am also passionate about science communication, mentorship, and promoting accessibility in research.  
+      This site collects my CV, teaching, outreach, and selected projects.</p>
+
+      <h2>Quick links</h2>
+      <ul>
+        <li><a href="cv.html">Curriculum Vitae</a></li>
+        <li><a href="projects.html">Selected projects</a></li>
+        <li><a href="teaching.html">Teaching & outreach</a></li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
