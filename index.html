@@ -2,19 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Erin Ricaloglu — Researcher</title>
+  <title>Erin Ricaloglu — Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root{--bg:#0f172a;--fg:#e5e7eb;--muted:#94a3b8;--link:#60a5fa;--card:#111827;--line:#1f2937;}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,#0b1220,#0f172a);color:var(--fg)}
-    header{position:sticky;top:0;background:#0b1220cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-    .nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
-    .nav a{color:var(--fg);text-decoration:none;opacity:.9} .nav a:hover{color:var(--link)}
-    .nav .spacer{margin-left:auto;color:var(--muted);font-size:.95rem}
-    main{max-width:900px;margin:40px auto;padding:0 20px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:22px}
-    h1{margin:0 0 8px} p{line-height:1.7}
-    .links a{margin-right:14px;color:var(--link)}
+    /* 🌸 Cute pastel theme to match cv.html */
+    :root{
+      --bg1:#fdfbfb; --bg2:#f3e7e9; /* blush gradient */
+      --ink:#333;
+      --accent:#6a4c93;  /* lavender plum */
+      --accent-2:#d45d79;/* rose */
+      --card:#ffffffdd;
+      --line:#e8d6eb;
+      --pill:#fce7f3;
+      --sub:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--ink); line-height:1.7;
+    }
+    /* Header / Nav */
+    header{
+      position:sticky; top:0; z-index:10;
+      background:#fff0f5cc; backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:1000px; margin:auto;
+      display:flex; align-items:center; gap:24px;
+      padding:14px 20px;
+    }
+    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
+    .nav a:hover{ color:var(--accent-2) }
+    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
+    /* Layout */
+    main{ max-width:900px; margin:40px auto; padding:0 20px }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+      padding:24px; margin-bottom:26px;
+    }
+    h1,h2{ margin:0 0 10px; color:var(--accent) }
+    p{ margin:8px 0 }
+    .pill{
+      display:inline-block; padding:8px 14px; margin:6px 8px 0 0;
+      background:var(--pill); border-radius:999px; color:var(--accent);
+      text-decoration:none; font-size:.9rem;
+    }
+    .list{ padding-left:18px; margin:0 }
+    .list li{ margin-bottom:8px }
+    .muted{ color:var(--sub) }
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
   </style>
 </head>
 <body>
@@ -24,27 +68,69 @@
       <a href="index.html">About</a>
       <a href="cv.html">CV</a>
       <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="volunteering.html">Volunteering</a>
       <a href="projects.html">Projects</a>
       <span class="spacer">Toronto, ON</span>
     </nav>
   </header>
 
   <main>
-    <div class="card">
-      <h1>Welcome</h1>
-      <p>I am a PhD student in Behavioural Neuroscience at the University of Toronto. 
-      My research interests focus on neuroepigenetics, chromatin biology, and the molecular foundations of memory and cognition.</p>
-
-      <p>Outside of the lab, I am passionate about teaching, mentorship, and public engagement in science. 
-      This site collects my CV, teaching experience, outreach activities, and links to ongoing projects on GitHub.</p>
-
-      <div class="links">
-        <a href="cv.html">View CV</a>
-        <a href="teaching.html">Teaching & Outreach</a>
-        <a href="projects.html">Research Projects</a>
-        <a href="https://github.com/erinstar">GitHub</a>
-        <a href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a>
+    <!-- Intro -->
+    <div class="section">
+      <h1>Hi, I’m Erin ✿</h1>
+      <p>I’m a PhD student in Behavioural Neuroscience at the University of Toronto. 
+         I’m broadly interested in neuroepigenetics, chromatin biology, and how molecular changes relate to cognition and behaviour. 
+         I also care deeply about teaching, mentorship, and making science welcoming for everyone.</p>
+      <div>
+        <a class="pill" href="cv.html">View CV</a>
+        <a class="pill" href="outreach.html">Outreach & Sci Comm</a>
+        <a class="pill" href="projects.html">Research Projects</a>
+        <a class="pill" href="teaching.html">Teaching</a>
+        <a class="pill" href="volunteering.html">Volunteering</a>
+        <a class="pill" href="mailto:erin.ricaloglu@gmail.com">Email me</a>
+        <a class="pill" href="https://github.com/erinstar">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a>
       </div>
+    </div>
+
+    <!-- Quick Highlights -->
+    <div class="section">
+      <h2>What you’ll find here</h2>
+      <ul class="list">
+        <li><strong>CV:</strong> education, research, awards, and skills (PDF available on request).</li>
+        <li><strong>Teaching:</strong> courses I support and my mentorship approach.</li>
+        <li><strong>Outreach:</strong> program leadership, equity-focused communication, and K–12 engagement.</li>
+        <li><strong>Projects:</strong> selected research summaries with links to code on GitHub.</li>
+        <li><strong>Volunteering:</strong> animal welfare work and campus involvement that shaped my science practice.</li>
+      </ul>
+      <p class="muted">If you’re a student or collaborator, please reach out — I’m happy to chat.</p>
+    </div>
+
+    <!-- Featured Cards -->
+    <div class="grid">
+      <div class="section">
+        <h2>Latest</h2>
+        <p>Settling into doctoral research and continuing science communication & outreach across the GTA.</p>
+        <a class="pill" href="projects.html">See projects →</a>
+      </div>
+      <div class="section">
+        <h2>Teaching & Mentorship</h2>
+        <p>Inclusive, hands-on teaching with clear connections from theory to everyday life.</p>
+        <a class="pill" href="teaching.html">Teaching page →</a>
+      </div>
+      <div class="section">
+        <h2>Outreach</h2>
+        <p>Program leadership (Let’s Talk Science), Sci High classroom talks, and equity-focused communication.</p>
+        <a class="pill" href="outreach.html">Outreach page →</a>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email is best: <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
+      <p class="muted">I can provide a full PDF CV on request.</p>
     </div>
   </main>
 </body>
