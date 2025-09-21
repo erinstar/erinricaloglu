@@ -59,6 +59,13 @@
       display:grid; gap:18px;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     }
+    /* Cute side images */
+    .side-img{
+      float:right; 
+      margin:0 0 12px 16px; 
+      max-width:180px; 
+      border-radius:12px;
+    }
   </style>
 </head>
 <body>
@@ -78,9 +85,13 @@
     <!-- Intro -->
     <div class="section">
       <h1>Hi, I’m Erin ✿</h1>
-      <p>I’m a PhD student in Behavioural Neuroscience at the University of Toronto. 
-         I’m broadly interested in neuroepigenetics, chromatin biology, and how molecular changes relate to cognition, behaviour and the development of Alzheimer's Disease. 
-         I also care deeply about teaching, mentorship, and making science welcoming for everyone.</p>
+      <p>
+        <img src="images/cute_neuro.jpg" alt="Cute neuro art" class="side-img">
+        <img src="images/histo_brain.png" alt="Histology brain section" class="side-img">
+        I’m a PhD student in Behavioural Neuroscience at the University of Toronto. 
+        I’m broadly interested in neuroepigenetics, chromatin biology, and how molecular changes relate to cognition, behaviour and the development of Alzheimer's Disease. 
+        I also care deeply about teaching, mentorship, and making science welcoming for everyone.
+      </p>
       <div>
         <a class="pill" href="cv.html">View CV</a>
         <a class="pill" href="outreach.html">Outreach & Sci Comm</a>
@@ -125,12 +136,12 @@
     </div>
 
     <!-- Contact -->
-  <div class="section">
-  <h2>Contact</h2>
-  <p>Email (personal): <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
-  <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
-  <p class="muted">I can provide a full PDF CV on request.</p>
-</div>
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email (personal): <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
+      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
+      <p class="muted">I can provide a full PDF CV on request.</p>
+    </div>
   </main>
 </body>
 </html>
