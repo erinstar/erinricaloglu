@@ -8,23 +8,75 @@
     :root{
       --bg1:#fdfbfb; --bg2:#f3e7e9;
       --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
-      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
+      --card:#ffffffdd; --line:#e8d6eb; --sub:#6b7280;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--ink);line-height:1.7}
-    header{position:sticky;top:0;background:#fff0f5cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-    .nav{max-width:1000px;margin:auto;display:flex;align-items:center;gap:24px;padding:14px 20px}
-    .nav a{color:var(--accent);text-decoration:none;font-weight:500;transition:.15s}
+    body{
+      margin:0;
+      font-family:"Helvetica Neue",Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--ink);
+      line-height:1.7
+    }
+    header{
+      position:sticky;
+      top:0;
+      background:#fff0f5cc;
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line)
+    }
+    .nav{
+      max-width:1000px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      padding:14px 20px
+    }
+    .nav a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:500;
+      transition:.15s
+    }
     .nav a:hover{color:var(--accent-2)}
-    .spacer{margin-left:auto;color:#a78bfa;font-size:.95rem}
-    main{max-width:900px;margin:40px auto;padding:0 20px}
-    .section{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 12px rgba(0,0,0,.05);padding:24px;margin-bottom:26px}
-    h1,h2{margin:0 0 10px;color:var(--accent)}
-    ul{padding-left:20px;margin:0}
-    li{margin-bottom:10px}
-    .note{font-size:.9rem;color:var(--sub);text-align:right;font-style:italic}
+    .spacer{
+      margin-left:auto;
+      color:#a78bfa;
+      font-size:.95rem
+    }
+    main{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px
+    }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+      padding:24px;
+      margin-bottom:26px
+    }
+    h1,h2{
+      margin:0 0 10px;
+      color:var(--accent)
+    }
+    ul{
+      padding-left:20px;
+      margin:0
+    }
+    li{
+      margin-bottom:12px
+    }
+    .note{
+      font-size:.9rem;
+      color:var(--sub);
+      text-align:right
+    }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
@@ -39,15 +91,66 @@
   </header>
 
   <main>
+
+    <!-- INTRO -->
     <div class="section">
-      <h1>Teaching</h1>
-      <p>I believe in inclusive, hands-on teaching that makes abstract concepts approachable and connected to real-world applications. I aim to foster curiosity and confidence in every student, whether in tutorials, labs, or one-on-one mentorship.</p>
+      <h1>Teaching & Mentorship</h1>
+      <p>
+        My teaching and mentorship experience supports my broader research training
+        in neuroscience. These roles focus on evaluation, academic support, and
+        communication of complex scientific concepts within undergraduate and trainee settings.
+      </p>
     </div>
 
+    <!-- MENTORSHIP FIRST -->
     <div class="section">
-      <h2>Teaching Assistant & Invigilator</h2>
-      <p><strong>University of Toronto Mississauga (2025–present)</strong></p>
-      <p>Supported undergraduate student learning by preparing and delivering tutorials, facilitating lab activities, and assisting with exam invigilation. Courses include:</p>
+      <h2>Mentorship & Evaluation Roles</h2>
+      <ul>
+        <li>
+          <strong>Research Proposal Judge</strong>, Alzheimer’s Association Ideathon (2026)<br>
+          Evaluated high school and undergraduate neuroscience research proposals,
+          providing feedback on scientific rigor, feasibility, and experimental design.
+        </li>
+        <li>
+          <strong>Scientific Review Panel Member</strong>, Branch Out Neurological Foundation (Forthcoming, 2026)<br>
+          Review undergraduate neuroscience grant applications for clarity,
+          methodological soundness, and scientific merit.
+        </li>
+        <li>
+          <strong>Graduate Judge</strong>, STAR Program — University Health Network (2025)<br>
+          Assessed undergraduate research posters and oral presentations with emphasis
+          on data quality, interpretation, and presentation clarity.
+        </li>
+        <li>
+          <strong>NASA Space Apps Challenge Judge</strong>, University of Toronto Mississauga (2025)<br>
+          Guided youth participants on data-driven problem solving and evaluated final
+          team pitches for creativity, feasibility, and scientific grounding.
+        </li>
+        <li>
+          <strong>Brain Bee Judge</strong>, University of Toronto (2026)<br>
+          Evaluated high school students on undergraduate-level neuroscience knowledge.
+        </li>
+        <li>
+          <strong>STEM Mentor</strong>, Letters to a Pre-Scientist (2024– )<br>
+          One-on-one mentorship with middle school students, focused on STEM exposure
+          and academic pathways.
+        </li>
+      </ul>
+    </div>
+
+    <!-- TA EXPERIENCE SECOND -->
+    <div class="section">
+      <h2>Teaching Assistant Experience</h2>
+      <p><strong>Teaching Assistant & Invigilator</strong><br>
+      University of Toronto Mississauga (2025–present)</p>
+
+      <ul>
+        <li>Led tutorials and assisted with laboratory and in-class activities</li>
+        <li>Supported exam invigilation and grading</li>
+        <li>Provided academic guidance during office hours and review sessions</li>
+      </ul>
+
+      <p><strong>Courses supported:</strong></p>
       <ul>
         <li>PSY344 — Forensic Psychology</li>
         <li>PSY393 — Human Neuropsychology</li>
@@ -56,25 +159,13 @@
       </ul>
     </div>
 
-    <div class="section">
-      <h2>Mentorship</h2>
-      <ul>
-        <li><strong>Brain Bee Judge</strong>, UTM (2026) — Assessed high school students on undergraduate-level neuroscience knowledge and skills. </li>
-        <li><strong>Graduate Judge</strong>, STAR Program (2025) — Evaluated undergraduate research posters, providing constructive feedback on clarity, analysis, and presentation skills.</li>
-        <li><strong>STEM Mentor</strong>, Letters to a Pre-Scientist (2024– ) — Long-term pen-pal mentorship with middle school students in underserved communities, encouraging representation and confidence in STEM pathways.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Teaching Philosophy</h2>
-      <p>I strive to create learning environments where students feel both supported and challenged. My approach integrates active learning, collaborative discussion, and real-world connections, ensuring that students leave with both conceptual knowledge and practical skills.</p>
-    </div>
-
+    <!-- CONTACT -->
     <div class="section">
       <h2>Contact</h2>
-      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
-      <p class="note">Always happy to connect with students, collaborators, and educators ✿</p>
+      <p>Email: <a href="mailto:erin.ricaloglu@utoronto.ca">erin.ricaloglu@utoronto.ca</a></p>
+      <p class="note">For academic, mentoring, or research-related inquiries.</p>
     </div>
+
   </main>
 </body>
 </html>
