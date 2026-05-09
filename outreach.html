@@ -4,47 +4,169 @@
   <meta charset="UTF-8" />
   <title>Outreach — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root{
-      --bg1:#fdfbfb; --bg2:#f3e7e9;
-      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
-      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--ink); line-height:1.7;
-    }
-    header{
-      position:sticky; top:0; z-index:10;
-      background:#fff0f5cc; backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:1000px; margin:auto;
-      display:flex; align-items:center; gap:24px;
-      padding:14px 20px;
-    }
-    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
-    .nav a:hover{ color:var(--accent-2) }
-    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
 
-    main{ max-width:900px; margin:40px auto; padding:0 20px }
-    .section{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:0 4px 12px rgba(0,0,0,.05);
-      padding:24px; margin-bottom:26px;
+  <style>
+    :root {
+      --bg1: #fdfbfb;
+      --bg2: #f3e7e9;
+      --ink: #333333;
+      --accent: #6a4c93;
+      --accent-2: #d45d79;
+      --card: #ffffffdd;
+      --line: #e8d6eb;
+      --sub: #6b7280;
+      --shadow: rgba(0, 0, 0, 0.05);
     }
-    h1,h2{ margin:0 0 10px; color:var(--accent) }
-    p{ margin:8px 0 }
-    ul{ padding-left:20px; margin:0 }
-    li{ margin-bottom:18px }
-    .muted{ color:var(--sub) }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fff0f5cc;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav strong {
+      color: var(--ink);
+      margin-right: 6px;
+    }
+
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--accent-2);
+    }
+
+    .spacer {
+      margin-left: auto;
+      color: #a78bfa;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 26px;
+      margin-bottom: 26px;
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 12px;
+      color: var(--accent);
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 18px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .role-title {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .role-meta {
+      color: var(--sub);
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: var(--accent-2);
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        gap: 14px;
+      }
+
+      .spacer {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      main {
+        margin: 28px auto;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
@@ -52,61 +174,160 @@
       <a href="index.html">About</a>
       <a href="cv.html">CV</a>
       <a href="mentorship.html">Mentorship</a>
-      <a href="outreach.html">Outreach</a>
+      <a href="outreach.html" class="active">Outreach</a>
       <a href="projects.html">Projects</a>
       <span class="spacer">University of Toronto</span>
     </nav>
   </header>
 
   <main>
-    <!-- Intro -->
-    <div class="section">
-      <h1>Scientific Outreach and Communication</h1>
-      <p>Alongside research and teaching, I am committed to making science accessible, equitable, and engaging for audiences of all ages. 
-      I have helped to develop, lead and design outreach programs for K–12 classrooms, public audiences, and online communities. 
-      My work emphasizes mentorship, equity in STEM, and creating pathways for students who may not otherwise see themselves represented in science.</p>
-    </div>
 
-    <!-- Roles -->
-    <div class="section">
-      <h2>Outreach & Mentorship</h2>
+    <!-- INTRO -->
+    <section class="section">
+      <h1>Scientific Outreach & Communication</h1>
+      <p>
+        Alongside research and teaching, I am committed to making science accessible,
+        engaging, and easier to connect with. My outreach work includes classroom visits,
+        public STEM programming, volunteer coordination, science writing, and presentations
+        for academic and broader audiences.
+      </p>
+    </section>
+
+    <!-- OUTREACH ROLES -->
+    <section class="section">
+      <h2>Outreach Roles</h2>
+
       <ul>
         <li>
-          <strong>Outreach Coordinator</strong>, Let’s Talk Science (2025– )  
-          <p>Lead the University of Toronto Mississauga site, organizing STEM programs for schools and community organizations across the GTA. 
-          Recruit, train, and mentor over 100 student volunteers annually. 
-          Manage logistics and partnerships for flagship events such as <em>Science Rendezvous</em> and the <em>Let’s Talk Science Challenge</em>, collectively reaching more than 200 youth each year. 
-          Responsible for budgeting, program design, and ensuring equitable access for underserved schools.</p>
+          <span class="role-title">Volunteer Coordinator</span>,
+          Let’s Talk Science | Parlons sciences
+          <span class="role-meta">(2025–present)</span><br />
+          Coordinate STEM outreach programs through the University of Toronto Mississauga site,
+          including school visits, community programming, and large-scale youth events.
+          Recruit, train, and support undergraduate volunteers, and help organize activities
+          that make science interactive and approachable for K–12 students.
         </li>
 
         <li>
-          <strong>Sci High Graduate Communicator</strong>, GTA (2025-)  
-          <p>Delivered interactive classroom talks on molecular biology and genetics to high school students. 
-          Focused on making research concepts approachable, inspiring students to engage with university-level science, 
-          and encouraging equity and representation in STEM pathways.</p>
+          <span class="role-title">Sci High Graduate Communicator</span>,
+          GTA
+          <span class="role-meta">(2025–present)</span><br />
+          Deliver interactive classroom talks on molecular biology, genetics, and research pathways
+          for high school students. These sessions are designed to make university-level science
+          more approachable and to help students see how research connects to real-world questions.
         </li>
 
         <li>
-          <strong>STEM Mentor</strong>, Letters to a Pre-Scientist (2024– )  
-          <p>Provide long-term mentorship to middle school students in underserved communities through pen-pal exchanges. 
-          Share stories of daily life as a researcher, offer advice on navigating educational pathways, and encourage the pursuit of curiosity-driven science. 
-          Help students connect STEM to their own interests and goals, building confidence and representation in the sciences.</p>
+          <span class="role-title">Communications Assistant</span>,
+          Women’s Health Research Cluster
+          <span class="role-meta">(2024–present)</span><br />
+          Create accessible science communication materials on women’s health and reproductive
+          justice. Contribute to infographics, social media content, and knowledge mobilization
+          initiatives that translate research for academic and public audiences.
         </li>
 
         <li>
-          <strong>Communications Assistant</strong>, Women’s Health Research Cluster (2024–)  
-          <p>Created accessible science communication materials to highlight equity issues in women’s health and reproductive justice. 
-          Produced infographics and social media content, translating research for both academic and general audiences. 
-          Supported knowledge mobilization initiatives that promote diverse perspectives in health research and advocate for systemic change.</p>
+          <span class="role-title">STEM Mentor</span>,
+          Letters to a Pre-Scientist
+          <span class="role-meta">(2024–present)</span><br />
+          Mentor middle school students through written exchanges about science, education,
+          and research careers. Share personal experiences from academic life and encourage
+          curiosity-driven engagement with STEM.
         </li>
       </ul>
-    </div>
+    </section>
 
-    <!-- Contact -->
-    <div class="section">
-      <h2>Get in touch</h2>
-      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
-    </div>
+    <!-- SCIENCE COMMUNICATION AND PRESENTATIONS -->
+    <section class="section">
+      <h2>Science Communication & Presentations</h2>
+
+      <ul>
+        <li>
+          <span class="role-title">Science Communication Blog</span>
+          <span class="role-meta">(2026–present)</span><br />
+          Co-develop a public-facing science blog focused on making research easier to understand
+          without relying on unnecessary jargon. The blog highlights accessible explanations of
+          topics in neuroscience, genomics, health, and biology.
+        </li>
+
+        <li>
+          <span class="role-title">CAMH Research Presentation</span>,
+          University of Toronto Faculty Club
+          <span class="role-meta">(2025)</span><br />
+          Presented summer research on postpartum depression, behavioural neuroscience, and rodent
+          models under the supervision of Dr. Liisa Galea at the Centre for Addiction and Mental Health.
+        </li>
+
+        <li>
+          <span class="role-title">Ontario Biology Day Presenter</span>
+          <span class="role-meta">(2025)</span><br />
+          Presented honours thesis research on computational ecology and biodiversity persistence,
+          communicating model-based findings to biology students, faculty, and researchers.
+        </li>
+
+        <li>
+          <span class="role-title">McMaster Undergraduate Research Symposium Presenter</span>
+          <span class="role-meta">(2025)</span><br />
+          Shared honours thesis research on habitat patch size, biodiversity, and ecological modelling
+          with an interdisciplinary undergraduate research audience.
+        </li>
+
+        <li>
+          <span class="role-title">Senior Thesis Presentation</span>,
+          McMaster University
+          <span class="role-meta">(2025)</span><br />
+          Presented computational ecology thesis findings on how small habitat patches may support
+          biodiversity under equivalent total habitat area.
+        </li>
+
+        <li>
+          <span class="role-title">DNA Replication and Repair Conference Poster Presenter</span>
+          <span class="role-meta">(2025)</span><br />
+          Presented research on non-B DNA motif landscapes across telomere-to-telomere human genome
+          assemblies, with emphasis on repetitive DNA, structural variation, and genome stability.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ADDITIONAL ENGAGEMENT -->
+    <section class="section">
+      <h2>Additional Engagement</h2>
+
+      <ul>
+        <li>
+          <span class="role-title">Brain Bee Speaker</span>,
+          University of Toronto
+          <span class="role-meta">(2026)</span><br />
+          Supported neuroscience outreach for high school students through academic engagement
+          and public-facing neuroscience education.
+        </li>
+
+        <li>
+          <span class="role-title">McMaster Welcome Week Biology Representative</span>,
+          McMaster University
+          <span class="role-meta">(2021–2025)</span><br />
+          Helped welcome incoming biology students, support undergraduate transition, and build
+          community within the biology program.
+        </li>
+
+        <li>
+          <span class="role-title">Biology Society Events Volunteer</span>,
+          McMaster University
+          <span class="role-meta">(2021–2025)</span><br />
+          Supported student-facing academic and community events within the Department of Biology.
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact">
+      <h2>Get in Touch</h2>
+      <p>
+        Email:
+        <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a>
+      </p>
+    </section>
+
   </main>
 </body>
 </html>
