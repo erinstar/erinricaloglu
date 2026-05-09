@@ -4,50 +4,189 @@
   <meta charset="UTF-8" />
   <title>Projects — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root{
-      --bg1:#fdfbfb; --bg2:#f3e7e9;
-      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
-      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--ink); line-height:1.7;
-    }
-    header{
-      position:sticky; top:0; z-index:10;
-      background:#fff0f5cc; backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:1000px; margin:auto;
-      display:flex; align-items:center; gap:24px;
-      padding:14px 20px;
-    }
-    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
-    .nav a:hover{ color:var(--accent-2) }
-    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
 
-    main{ max-width:900px; margin:40px auto; padding:0 20px }
-    .section{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:0 4px 12px rgba(0,0,0,.05);
-      padding:24px; margin-bottom:26px;
+  <style>
+    :root {
+      --bg1: #fdfbfb;
+      --bg2: #f3e7e9;
+      --ink: #333333;
+      --accent: #6a4c93;
+      --accent-2: #d45d79;
+      --card: #ffffffdd;
+      --line: #e8d6eb;
+      --pill: #fce7f3;
+      --sub: #6b7280;
+      --shadow: rgba(0, 0, 0, 0.05);
     }
-    h1,h2{ margin:0 0 10px; color:var(--accent) }
-    p{ margin:8px 0 }
-    ul{ padding-left:20px; margin:0 }
-    li{ margin-bottom:22px }
-    .pill{
-      display:inline-block; padding:8px 14px; margin:6px 8px 0 0;
-      background:var(--pill); border-radius:999px; color:var(--accent);
-      text-decoration:none; font-size:.9rem;
+
+    * {
+      box-sizing: border-box;
     }
-    .muted{ color:var(--sub) }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fff0f5cc;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav strong {
+      color: var(--ink);
+      margin-right: 6px;
+    }
+
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--accent-2);
+    }
+
+    .spacer {
+      margin-left: auto;
+      color: #a78bfa;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 26px;
+      margin-bottom: 26px;
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 12px;
+      color: var(--accent);
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 22px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-title {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .project-meta {
+      color: var(--sub);
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 6px 8px 0 0;
+      background: var(--pill);
+      border-radius: 999px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .pill:hover {
+      color: var(--accent-2);
+    }
+
+    .muted {
+      color: var(--sub);
+      font-size: 0.95rem;
+    }
+
+    .contact a,
+    .section a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .section a:hover {
+      color: var(--accent-2);
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        gap: 14px;
+      }
+
+      .spacer {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      main {
+        margin: 28px auto;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
   </style>
 </head>
 
@@ -59,7 +198,7 @@
       <a href="cv.html">CV</a>
       <a href="mentorship.html">Mentorship</a>
       <a href="outreach.html">Outreach</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <span class="spacer">University of Toronto</span>
     </nav>
   </header>
@@ -67,101 +206,118 @@
   <main>
 
     <!-- INTRO -->
-    <div class="section">
+    <section class="section">
       <h1>Projects</h1>
       <p>
-        This page highlights selected research projects that reflect my interests in neuroepigenetics,
-        chromatin biology, and mechanisms of neuronal vulnerability in disease. Together, these projects
-        span molecular neuroscience, genomics, behavior, and computational modeling.
+        This page highlights selected research projects across neuroscience, molecular biology,
+        computational ecology, and conservation. Together, these experiences reflect my interest
+        in how biological systems change across molecular, cellular, behavioural, and ecological scales.
         For code and analysis pipelines, see my
         <a href="https://github.com/erinstar" target="_blank">GitHub</a>.
       </p>
-    </div>
+    </section>
 
     <!-- DOCTORAL RESEARCH -->
-    <div class="section">
+    <section class="section">
       <h2>Doctoral Research</h2>
+
       <ul>
         <li>
-          <strong>Epigenetic Regulation of Lysosomal Function and Memory in Alzheimer’s Disease</strong>
-          — University of Toronto (2025– )
+          <span class="project-title">Epigenetic Regulation of Lysosomal Function in Alzheimer’s Disease</span><br />
+          <span class="project-meta">University of Toronto, 2025–present</span>
+
           <p>
-            My PhD research investigates how histone variant–mediated chromatin regulation shapes
-            lysosomal gene expression and neuronal vulnerability in Alzheimer’s disease. I focus on the
-            histone variant <em>macroH2A1</em> as a potential regulator of long-term transcriptional programs
-            that support lysosomal function in hippocampal neurons.
+            My PhD research examines how histone variant regulation influences gene expression
+            programs in hippocampal neurons during Alzheimer’s disease. I focus on
+            <em>macroH2A1</em> and its potential role in regulating lysosomal pathways that are
+            important for neuronal function and cellular homeostasis.
           </p>
+
           <p>
-            Using a combination of chromatin profiling (ChIP-seq), transcriptomics (RNA-seq),
-            viral manipulation in vivo, and lysosomal functional assays, I examine how epigenetic
-            dysregulation may contribute to early cellular dysfunction preceding overt neurodegeneration.
-            This work integrates molecular, cellular, and behavioral approaches to link chromatin state
-            to memory-relevant outcomes.
+            This project uses chromatin profiling, transcriptomic approaches, in vivo viral
+            manipulation, microscopy, and lysosomal assays to study early molecular changes that
+            may contribute to disease progression.
           </p>
+
           <p class="muted">
-            Core methods: ChIP-seq (in training), RNA-seq (in training), AAV-mediated gene manipulation, confocal microscopy,
-            lysosomal pH and proteolysis assays, rodent behavioral models.
+            Core methods: ChIP-seq training, RNA-seq training, AAV-mediated gene manipulation,
+            confocal microscopy, lysosomal functional assays, and rodent behavioural models.
           </p>
         </li>
       </ul>
-    </div>
+    </section>
 
     <!-- PRIOR RESEARCH -->
-    <div class="section">
+    <section class="section">
       <h2>Undergraduate & Fellowship Research</h2>
+
       <ul>
         <li>
-          <strong>Postpartum Depression, Neuroinflammation, and Antidepressant Response</strong>
-          — CAMH (2025)
+          <span class="project-title">Postpartum Depression, Neuroinflammation, and Antidepressant Response</span><br />
+          <span class="project-meta">Centre for Addiction and Mental Health, 2025</span>
+
           <p>
-            Conducted independent research on neuroimmune mechanisms underlying postpartum depression
-            in rodent models, examining how inflammatory signaling interacts with SSRI treatment efficacy.
-            Combined behavioral assays with immunohistochemistry to assess microglial plasticity and
-            brain-region–specific effects.
+            Conducted research on postpartum depression in rodent models under the supervision
+            of Dr. Liisa Galea. This project examined behavioural outcomes and brain-region-specific
+            cellular changes related to antidepressant response and neuroinflammatory signaling.
           </p>
         </li>
 
         <li>
-          <strong>Metacommunity Dynamics in Fragmented Landscapes</strong>
-          — McMaster University (2024–2025)
+          <span class="project-title">Metacommunity Dynamics in Fragmented Landscapes</span><br />
+          <span class="project-meta">McMaster University, 2024–2025</span>
+
           <p>
-            Developed agent-based computational models to test predictions of formal metacommunity theory,
-            focusing on how patch size, connectivity, and species specialization influence biodiversity
-            persistence. This work strengthened my quantitative reasoning and systems-level thinking,
-            which now inform my approach to complex biological networks in neuroscience.
+            Developed agent-based computational models to test how habitat patch size,
+            connectivity, and species specialization influence biodiversity persistence.
+            This honours thesis project used simulation-based approaches to explore how smaller
+            habitat patches may support biodiversity under equivalent total habitat area.
           </p>
-          <a class="pill" href="https://github.com/erinstar">Code on GitHub</a>
+
+          <a class="pill" href="https://github.com/erinstar" target="_blank">Code on GitHub</a>
         </li>
 
         <li>
-          <strong>Plant Immunity and Transcriptional Regulation</strong>
-          — McMaster University (2023–2024)
+          <span class="project-title">Plant Immunity and Systemic Acquired Resistance</span><br />
+          <span class="project-meta">McMaster University, 2023–2024</span>
+
           <p>
             Supported molecular biology research on systemic acquired resistance in
-            <em>Arabidopsis thaliana</em>, gaining experience in RNA extraction, PCR, and experimental
-            design. This work provided early training in transcriptional regulation and host defense
-            mechanisms.
+            <em>Arabidopsis thaliana</em>. This role provided early training in RNA extraction,
+            PCR, plant immunity, and experimental design.
           </p>
         </li>
 
         <li>
-          <strong>Amphibian Disease Ecology and Conservation</strong>
-          — Operation Wallacea, Honduras (2023)
+          <span class="project-title">Primate Welfare and Sanctuary-Based Research</span><br />
+          <span class="project-meta">Fauna Foundation / Central Washington University, 2024</span>
+
           <p>
-            Conducted field-based surveillance of chytrid fungal infections in amphibian populations
-            within cloud forest ecosystems. Authored a report examining disease emergence and conservation
-            risk, contributing to broader efforts to understand pathogen-driven biodiversity loss.
+            Contributed to information research related to primate behaviour, welfare,
+            and sanctuary-based care in collaboration with Central Washington University.
+          </p>
+        </li>
+
+        <li>
+          <span class="project-title">Amphibian Disease Ecology and Conservation</span><br />
+          <span class="project-meta">Operation Wallacea, Honduras, 2023</span>
+
+          <p>
+            Supported field-based biodiversity and disease ecology work in tropical ecosystems,
+            with a focus on amphibian conservation and pathogen-related threats.
           </p>
         </li>
       </ul>
-    </div>
+    </section>
 
     <!-- CONTACT -->
-    <div class="section">
-      <h2>Get in touch</h2>
-      <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
-      <p class="muted">Personal: <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
-    </div>
+    <section class="section contact">
+      <h2>Get in Touch</h2>
+      <p>
+        Email:
+        <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a>
+      </p>
+    </section>
 
   </main>
 </body>
