@@ -7,82 +7,172 @@
   <style>
     /* 🌸 Cute pastel theme to match cv.html */
     :root{
-      --bg1:#fdfbfb; --bg2:#f3e7e9; /* blush gradient */
+      --bg1:#fdfbfb; --bg2:#f3e7e9;
       --ink:#333;
-      --accent:#6a4c93;  /* lavender plum */
-      --accent-2:#d45d79;/* rose */
+      --accent:#6a4c93;
+      --accent-2:#d45d79;
       --card:#ffffffdd;
       --line:#e8d6eb;
       --pill:#fce7f3;
       --sub:#6b7280;
     }
+
     *{box-sizing:border-box}
+
     body{
-      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
+      margin:0;
+      font-family:"Helvetica Neue", Arial, sans-serif;
       background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--ink); line-height:1.7;
+      color:var(--ink);
+      line-height:1.7;
     }
-    /* Header / Nav */
+
     header{
-      position:sticky; top:0; z-index:10;
-      background:#fff0f5cc; backdrop-filter:blur(8px);
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:#fff0f5cc;
+      backdrop-filter:blur(8px);
       border-bottom:1px solid var(--line);
     }
+
     .nav{
-      max-width:1000px; margin:auto;
-      display:flex; align-items:center; gap:24px;
+      max-width:1000px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      gap:24px;
       padding:14px 20px;
+      flex-wrap:wrap;
     }
-    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
-    .nav a:hover{ color:var(--accent-2) }
-    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
-    /* Layout */
-    main{ max-width:900px; margin:40px auto; padding:0 20px }
+
+    .nav a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:500;
+      transition:.15s;
+    }
+
+    .nav a:hover{
+      color:var(--accent-2);
+    }
+
+    .spacer{
+      margin-left:auto;
+      color:#a78bfa;
+      font-size:.95rem;
+      white-space:nowrap;
+    }
+
+    main{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+
     .section{
       background:var(--card);
       border:1px solid var(--line);
       border-radius:18px;
       box-shadow:0 4px 12px rgba(0,0,0,.05);
-      padding:24px; margin-bottom:26px;
+      padding:24px;
+      margin-bottom:26px;
     }
-    h1,h2{ margin:0 0 10px; color:var(--accent) }
-    p{ margin:8px 0 }
+
+    h1,h2{
+      margin:0 0 10px;
+      color:var(--accent);
+    }
+
+    p{
+      margin:8px 0;
+    }
+
     .pill{
-      display:inline-block; padding:8px 14px; margin:6px 8px 0 0;
-      background:var(--pill); border-radius:999px; color:var(--accent);
-      text-decoration:none; font-size:.9rem;
+      display:inline-block;
+      padding:8px 14px;
+      margin:6px 8px 0 0;
+      background:var(--pill);
+      border-radius:999px;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:.9rem;
     }
-    .list{ padding-left:18px; margin:0 }
-    .list li{ margin-bottom:8px }
-    .muted{ color:var(--sub) }
+
+    .pill:hover{
+      color:var(--accent-2);
+    }
+
+    .list{
+      padding-left:18px;
+      margin:0;
+    }
+
+    .list li{
+      margin-bottom:8px;
+    }
+
+    .muted{
+      color:var(--sub);
+    }
+
     .grid{
-      display:grid; gap:18px;
+      display:grid;
+      gap:18px;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     }
 
-    /* Contact box image */
-    .contact-box {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+    .contact-box{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:20px;
     }
 
-    .contact-box img {
-      width: 150px;   /* keeps image small */
-      height: auto;   /* keeps proportions */
-      border-radius: 12px;
-      margin-left: 20px;
-      flex-shrink: 0;
+    .contact-box img{
+      width:150px;
+      height:auto;
+      border-radius:12px;
+      flex-shrink:0;
+    }
+
+    @media (max-width:700px){
+      .nav{
+        gap:14px;
+      }
+
+      .spacer{
+        width:100%;
+        margin-left:0;
+      }
+
+      main{
+        margin:28px auto;
+      }
+
+      .section{
+        padding:22px;
+      }
+
+      .contact-box{
+        flex-direction:column;
+      }
+
+      .contact-box img{
+        width:130px;
+        margin-left:0;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
       <strong>Erin Ricaloglu</strong>
       <a href="index.html">About</a>
       <a href="cv.html">CV</a>
-      <a href="mentorship">Mentorship</a>
+      <a href="mentorship.html">Mentorship</a>
       <a href="outreach.html">Outreach</a>
       <a href="projects.html">Projects</a>
       <span class="spacer">Toronto, ON</span>
@@ -90,15 +180,34 @@
   </header>
 
   <main>
+
     <!-- Intro -->
     <div class="section">
       <h1>Hi, I’m Erin ✿</h1>
-      <p> I am a PhD student in Behavioural Neuroscience at the University of Toronto, where my research explores how epigenetic and chromatin-based mechanisms regulate gene expression in hippocampal neurons and contribute to early cellular dysfunction in Alzheimer’s disease. My work focuses on histone variant regulation and lysosomal pathways, with the goal of understanding how long-lasting molecular changes in the brain influence neuronal vulnerability and memory-related outcomes. More broadly, I aim to identify early regulatory mechanisms that shape disease progression. Beyond science, I am passionate about women’s health, writing, and mentoring. </p>
+
+      <p>
+        I am a PhD student in Behavioural Neuroscience at the University of Toronto, where my research explores how epigenetic and chromatin-based mechanisms regulate gene expression in hippocampal neurons and contribute to early cellular dysfunction in Alzheimer’s disease. My work focuses on histone variant regulation and lysosomal pathways, with the goal of understanding how long-lasting molecular changes in the brain influence neuronal vulnerability and memory-related outcomes. More broadly, I aim to identify early regulatory mechanisms that shape disease progression. Beyond science, I am passionate about women’s health, writing, and mentoring.
+      </p>
+
       <div>
-        <a class="pill" href="https://github.com/erinstar">GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/erinricaloglu">LinkedIn</a> 
-        <a class="pill" href="https://nerdvana.blog/">Science Communication Blog</a> 
-        <a class="pill" href="https://readingonastar.ca/">Book Blog</a>
+        <a class="pill" href="https://github.com/erinstar" target="_blank">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/erinricaloglu" target="_blank">LinkedIn</a>
+        <a class="pill" href="https://nerdvana.blog/" target="_blank">Science Communication Blog</a>
+        <a class="pill" href="https://readingonastar.ca/" target="_blank">Book Blog</a>
+      </div>
+    </div>
+
+    <!-- Websites -->
+    <div class="section">
+      <h2>Places to Find Me</h2>
+      <p>
+        I also apparently cannot stop making websites, so here are a few places to find me:
+      </p>
+
+      <div>
+        <a class="pill" href="https://erinstar.github.io/erinricaloglu/" target="_blank">Research Website</a>
+        <a class="pill" href="https://nerdvana.blog/" target="_blank">Science Writing</a>
+        <a class="pill" href="https://readingonastar.ca/" target="_blank">Reading & Writing</a>
       </div>
     </div>
 
@@ -108,7 +217,7 @@
       <ul class="list">
         <li><strong>CV:</strong> education, research, awards, and skills.</li>
         <li><strong>Mentorship:</strong> courses I support and my mentorship approach.</li>
-        <li><strong>Outreach:</strong> program leadership, equity-focused communication, and K–12 engagement.</li>
+        <li><strong>Outreach:</strong> science communication, public engagement, and K–12 outreach.</li>
         <li><strong>Projects:</strong> selected research summaries with links to code on GitHub.</li>
       </ul>
     </div>
@@ -120,28 +229,31 @@
         <p>As a first-year doctoral student, I’m focused on learning, research, and science communication.</p>
         <a class="pill" href="projects.html">See projects →</a>
       </div>
+
       <div class="section">
         <h2>Teaching & Mentorship</h2>
         <p>Developing thoughtful, accessible ways to communicate scientific material to undergraduate students.</p>
         <a class="pill" href="mentorship.html">See mentorship →</a>
       </div>
+
       <div class="section">
-  <h2>Outreach</h2>
-  <p>I love being involved both within and beyond academia, and finding ways to contribute to our community.</p>
-  <a class="pill" href="outreach.html">See outreach →</a>
-</div>
+        <h2>Outreach</h2>
+        <p>I love being involved both within and beyond academia, and finding ways to contribute to our community.</p>
+        <a class="pill" href="outreach.html">See outreach →</a>
+      </div>
     </div>
 
     <!-- Contact -->
     <div class="section contact-box">
       <div>
         <h2>Contact</h2>
-        <p>Email (personal): <a href="mailto:erin.ricaloglu@gmail.com">erin.ricaloglu@gmail.com</a></p>
-        <p>Email (student): <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
+        <p>Email: <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a></p>
         <p class="muted">I can provide a full PDF CV on request.</p>
       </div>
+
       <img src="d59ff7121c21c01576bb5ebd2e6b3d0c.jpg" alt="Genes to Cells cover" />
     </div>
+
   </main>
 </body>
 </html>
