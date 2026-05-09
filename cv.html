@@ -4,62 +4,229 @@
   <meta charset="UTF-8" />
   <title>CV — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    :root{
-      --bg1:#fdfbfb; --bg2:#f3e7e9;
-      --ink:#333; --accent:#6a4c93; --accent-2:#d45d79;
-      --card:#ffffffdd; --line:#e8d6eb; --pill:#fce7f3; --sub:#6b7280;
+    :root {
+      --bg1: #fdfbfb;
+      --bg2: #f3e7e9;
+      --ink: #333333;
+      --accent: #6a4c93;
+      --accent-2: #d45d79;
+      --card: #ffffffdd;
+      --line: #e8d6eb;
+      --pill: #fce7f3;
+      --sub: #6b7280;
+      --shadow: rgba(0, 0, 0, 0.05);
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:"Helvetica Neue", Arial, sans-serif;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--ink); line-height:1.7;
+
+    * {
+      box-sizing: border-box;
     }
-    header{
-      position:sticky; top:0; z-index:10;
-      background:#fff0f5cc; backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--ink);
+      line-height: 1.7;
     }
-    .nav{
-      max-width:1000px; margin:auto;
-      display:flex; align-items:center; gap:24px;
-      padding:14px 20px;
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fff0f5cc;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
     }
-    .nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:.15s }
-    .nav a:hover{ color:var(--accent-2) }
-    .spacer{ margin-left:auto; color:#a78bfa; font-size:.95rem }
-    main{ max-width:850px; margin:40px auto; padding:0 20px }
-    .section{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:0 4px 12px rgba(0,0,0,.05);
-      padding:24px; margin-bottom:26px;
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 14px 20px;
+      flex-wrap: wrap;
     }
-    h1,h2{ margin:0 0 10px; color:var(--accent) }
-    .subhead{ color:var(--sub); font-size:.9rem; margin-bottom:12px }
-    ul{ padding-left:20px; margin:0 }
-    li{ margin-bottom:10px }
-    .pill{
-      display:inline-block;
-      padding:8px 14px;
-      margin:6px 8px 0 0;
-      background:var(--pill);
-      border-radius:999px;
-      color:var(--accent);
-      text-decoration:none;
-      font-size:.9rem;
+
+    .nav strong {
+      color: var(--ink);
+      margin-right: 6px;
     }
-    .note{ font-size:.9rem; color:var(--sub); text-align:right; font-style:italic }
+
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--accent-2);
+    }
+
+    .spacer {
+      margin-left: auto;
+      color: #a78bfa;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 26px;
+      margin-bottom: 26px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--accent);
+      line-height: 1.3;
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .subhead {
+      color: var(--sub);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .education-list {
+      padding-left: 20px;
+    }
+
+    .education-list li {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .education-list div {
+      margin-top: 0.25rem;
+    }
+
+    .experience-item {
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .role-meta {
+      margin: 0 0 0.6rem;
+      color: var(--sub);
+      font-size: 0.95rem;
+    }
+
+    .skills {
+      color: var(--sub);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 6px 8px 0 0;
+      background: var(--pill);
+      border-radius: 999px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--sub);
+      text-align: right;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+
+    .note a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .note a:hover {
+      color: var(--accent-2);
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        gap: 14px;
+      }
+
+      .spacer {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      main {
+        margin: 28px auto;
+      }
+
+      .section {
+        padding: 22px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
       <strong>Erin Ricaloglu</strong>
       <a href="index.html">About</a>
-      <a href="cv.html">CV</a>
+      <a href="cv.html" class="active">CV</a>
       <a href="teaching.html">Teaching</a>
       <a href="outreach.html">Outreach</a>
       <a href="projects.html">Projects</a>
@@ -69,86 +236,208 @@
 
   <main>
 
-    <div class="section">
+    <!-- EDUCATION -->
+    <section class="section">
       <h2>Education</h2>
-      <ul>
-        <ul class="education-list">
-  <li>
-    <strong>PhD, Behavioural Neuroscience</strong> — University of Toronto (2025–2030, in progress)
-    <div><strong>Supervisor:</strong> Dr. Iva Zovkic, Department of Psychology</div>
-    <div><strong>Research focus:</strong> Histone variant exchange, chromatin regulation, lysosomal biology, and memory-related mechanisms in Alzheimer’s disease models.</div>
-    <div><strong>Activities and societies:</strong> Collaborative Specialization in Neuroscience, Brain Bee Speaker, Psychology Graduate Student Association Volunteer.</div>
-  </li>
 
-  <li>
-    <strong>BSc (Honours) Biology, Minor in Sociology</strong> — McMaster University (2021–2025)
-    <div><strong>Exchange:</strong> University of Copenhagen, Ancient Proteomics</div>
-    <div><strong>Honours thesis:</strong> How do small habitat patches support higher biodiversity for an equivalent habitat area?</div>
-    <div><strong>Relevant coursework:</strong> Molecular Biology, Animal Physiology, and Conservation Biology.</div>
-    <div><strong>Activities and societies:</strong> McMaster Welcome Week Biology Representative, Biology Society Events Volunteer, McMaster Outdoor Club.</div>
-  </li>
-</ul>
-    </div>
+      <ul class="education-list">
+        <li>
+          <strong>PhD, Behavioural Neuroscience</strong> — University of Toronto (2025–2030, in progress)
+          <div><strong>Supervisor:</strong> Dr. Iva Zovkic, Department of Psychology</div>
+          <div><strong>Research focus:</strong> Histone variant exchange, chromatin regulation, lysosomal biology, and memory-related mechanisms in Alzheimer’s disease models.</div>
+          <div><strong>Activities and societies:</strong> Collaborative Specialization in Neuroscience, Brain Bee Speaker, Psychology Graduate Student Association Volunteer.</div>
+        </li>
 
-    <div class="section">
-      <h2>Research Experience</h2>
-      <div class="subhead">Expanded descriptions available on the Projects page</div>
-      <ul>
         <li>
-          <strong>Doctoral Researcher — Neuroepigenetics & Alzheimer’s Disease</strong><br/>
-          University of Toronto (2025– )
-        </li>
-        <li>
-          <strong>Research Fellow — Behavioural Neuroendocrinology</strong><br/>
-          Centre for Addiction and Mental Health (CAMH) (2025)
-        </li>
-        <li>
-          <strong>Honours Thesis Researcher — Computational Ecology</strong><br/>
-          McMaster University (2024–2025)
-        </li>
-        <li>
-          <strong>Research Intern — Primate Data Analysis</strong><br/>
-          Fauna Foundation / Central Washington University (2024)
-        </li>
-        <li>
-          <strong>Laboratory Assistant — Molecular Biology</strong><br/>
-          McMaster University (2023–2024)
-        </li>
-        <li>
-          <strong>Field Researcher — Conservation Biology</strong><br/>
-          Operation Wallacea, Honduras (2023)
+          <strong>BSc (Honours) Biology, Minor in Sociology</strong> — McMaster University (2021–2025)
+          <div><strong>Exchange:</strong> University of Copenhagen, Ancient Proteomics</div>
+          <div><strong>Honours thesis:</strong> How do small habitat patches support higher biodiversity for an equivalent habitat area?</div>
+          <div><strong>Relevant coursework:</strong> Molecular Biology, Animal Physiology, and Conservation Biology.</div>
+          <div><strong>Activities and societies:</strong> McMaster Welcome Week Biology Representative, Biology Society Events Volunteer, McMaster Outdoor Club.</div>
         </li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <!-- EXPERIENCE -->
+    <section class="section">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <h3>Doctoral Student</h3>
+        <p class="role-meta">
+          University of Toronto · Sep 2025–present · Greater Toronto Area, Canada
+        </p>
+        <p>
+          Behavioural Neuroscience PhD student supervised by Dr. Iva Zovkic in the Epi Lab.
+          My research examines how histone variants influence gene regulation in Alzheimer’s disease,
+          with a focus on chromatin regulation, lysosomal biology, and memory-related mechanisms.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Transgenic mice, adeno-associated virus, molecular biology, experimental design
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Biological Sciences Representative</h3>
+        <p class="role-meta">
+          University of Toronto · Mar 2026–present · Greater Toronto Area, Canada
+        </p>
+        <p>
+          Review Animal Use Protocols and support ethical oversight of animal-based research
+          as part of university research governance.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Research ethics, animal research oversight
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Teaching Assistant & Invigilator</h3>
+        <p class="role-meta">
+          University of Toronto · Sep 2025–present · Greater Toronto Area, Canada
+        </p>
+        <p>
+          Deliver laboratory and tutorial sessions to support undergraduate learning in the
+          Department of Psychology, including academic support, grading, and exam invigilation.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Mentoring, undergraduate teaching, academic support
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Volunteer Coordinator</h3>
+        <p class="role-meta">
+          Let’s Talk Science | Parlons sciences · Jul 2025–present · University of Toronto
+        </p>
+        <p>
+          Coordinate STEM outreach programs and mentor undergraduate student volunteers across
+          the Greater Toronto Area. Organized a STEM competition at UTM for more than 150 students.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Science communication, community outreach, volunteer coordination
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>CAMH Research Fellow</h3>
+        <p class="role-meta">
+          Centre for Addiction and Mental Health · May 2025–Aug 2025 · Toronto, Ontario
+        </p>
+        <p>
+          Conducted research on postpartum depression under the supervision of Dr. Liisa Galea
+          at CAMH. Presented project findings at the Faculty Club, University of Toronto.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Neuroimaging, rodent models, behavioural neuroscience
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Undergraduate Student Researcher</h3>
+        <p class="role-meta">
+          McMaster University · Apr 2024–Apr 2025 · Hamilton, Ontario
+        </p>
+        <p>
+          Developed Python-based statistical pipelines to analyze biodiversity persistence
+          under the supervision of Dr. Jurek Kolasa. Presented findings at three conferences,
+          including Ontario Biology Day and the McMaster Undergraduate Research Symposium.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Python, statistical analysis, computational ecology, laboratory skills
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Research Assistant</h3>
+        <p class="role-meta">
+          McMaster University · Apr 2023–Mar 2024 · Hamilton, Ontario
+        </p>
+        <p>
+          Assisted graduate research under the supervision of Dr. Robin Cameron, investigating
+          systemic acquired resistance in <em>Arabidopsis thaliana</em>.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> RNA isolation, PCR, plant molecular biology
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Research Intern</h3>
+        <p class="role-meta">
+          Fauna Foundation · Feb 2024–Aug 2024 · Quebec, Canada
+        </p>
+        <p>
+          Completed a research internship in collaboration with Central Washington University,
+          supporting information research related to primate behaviour, welfare, and sanctuary-based care.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Information research, primates, animal welfare
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Technical Campus Coordinator</h3>
+        <p class="role-meta">
+          Shad Canada · May 2024–Jul 2024 · Remote
+        </p>
+        <p>
+          Supported student development in a national STEM and entrepreneurship program,
+          helping coordinate technical project work, student activities, and collaborative learning.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Student development, educational leadership, mentorship
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Field Research Assistant</h3>
+        <p class="role-meta">
+          Operation Wallacea · Jun 2023–Jul 2023 · Cusuco National Park and Tela, Honduras
+        </p>
+        <p>
+          Supported field research activities in tropical conservation settings, contributing to
+          biodiversity monitoring and ecological data collection.
+        </p>
+        <p class="skills">
+          <strong>Skills:</strong> Field work, conservation biology, ecological research
+        </p>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section">
       <h2>Awards & Recognition</h2>
-      <ul>
-        <li>Research Colloquium Award — University of Toronto, $1,250 CAD (2026)</li>
-        <li>Psychological and Brain Sciences Graduate Conference Award — University of Toronto, $500 CAD (2025)</li>
-        <li>BioTalent Canada Scholarship - BioTalent Canada / CAMH, $6,000 CAD (2025)</li>
-        <li>Dean’s Honour List — McMaster University</li>
-        <li>Office of Undergraduate Research Travel Award — McMaster University, $1,000 CAD (2025)</li>
-        <li>McMaster Exchange Ambassador Award — McMaster University, $1,000 CAD (2023)</li>
-        <li>McMaster Global Experience Award — McMaster University, $1,000 CAD (2023)</li>
-        <li>Beale-Lincoln-Hall Travel Scholarship — McMaster University, $1,000 CAD (2023)</li>
-      </ul>
-    </div>
 
-    <div class="section">
-   <h2>Technical Skills</h2>
-<ul>
-  <li><strong>Molecular & Cellular:</strong> PCR, RNA isolation, DNA extraction, western blotting, immunohistochemistry, ChIP-seq training, AAV-related techniques</li>
-  <li><strong>Animal Models:</strong> Rodent handling, transgenic mouse models, colony management, behavioural assays, stereotaxic surgery, CL2 surgery</li>
-  <li><strong>Computational:</strong> Python, R, NetLogo, data visualization, basic bioinformatics, information research</li>
-  <li><strong>Professional:</strong> Scientific writing, science communication, public outreach, mentoring, research ethics, experimental design, outreach coordination</li>
-</ul>
-    </div>
+      <ul>
+        <li><strong>Graduate Research Trainee Award</strong> — University of Toronto, $1,250 CAD (2026)</li>
+        <li><strong>Psychological and Brain Sciences Graduate Conference Award</strong> — University of Toronto, $500 CAD (2025)</li>
+        <li><strong>BioTalent Canada Student Award</strong> — BioTalent Canada / CAMH, $6,000 CAD (2025)</li>
+        <li><strong>Dean’s Honour List</strong> — McMaster University (2025)</li>
+        <li><strong>Office of Undergraduate Research Travel Award</strong> — McMaster University, $1,000 CAD (2025)</li>
+        <li><strong>McMaster Exchange Ambassador Award</strong> — McMaster University, $1,000 CAD (2023)</li>
+        <li><strong>McMaster Global Experience Award</strong> — McMaster University, $1,000 CAD (2023)</li>
+        <li><strong>Beale-Lincoln-Hall Travel Scholarship</strong> — McMaster University, $1,000 CAD (2023)</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2>Technical Skills</h2>
+
+      <ul>
+        <li><strong>Molecular & Cellular:</strong> PCR, RNA isolation, DNA extraction, western blotting, immunohistochemistry, ChIP-seq training, AAV-related techniques</li>
+        <li><strong>Animal Models:</strong> Rodent handling, transgenic mouse models, colony management, behavioural assays, stereotaxic surgery, CL2 surgery</li>
+        <li><strong>Computational:</strong> Python, R, NetLogo, data visualization, basic bioinformatics, information research</li>
+        <li><strong>Professional:</strong> Scientific writing, science communication, public outreach, mentoring, research ethics, experimental design, outreach coordination</li>
+      </ul>
+    </section>
 
     <div class="note">
-      Full CV (PDF) available upon request — 
+      Full CV (PDF) available upon request —
       <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a>
     </div>
+
   </main>
 </body>
 </html>
