@@ -2,279 +2,515 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Outreach — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Outreach — Erin Ricaloglu</title>
 
   <style>
     :root {
-      --bg1: #fdfbfb;
-      --bg2: #f3e7e9;
-      --ink: #333333;
-      --accent: #6a4c93;
-      --accent-2: #d45d79;
-      --card: #ffffffdd;
-      --line: #e8d6eb;
-      --sub: #6b7280;
-      --shadow: rgba(0, 0, 0, 0.05);
+      --bg: #fbfdff;
+      --ink: #25313c;
+      --sub: #71808f;
+
+      --blue: #89c7ea;
+      --blue-dark: #4e96c9;
+      --blue-soft: #eef7fc;
+
+      --line: #dcecf7;
+      --white: #ffffff;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: var(--bg);
       color: var(--ink);
-      line-height: 1.7;
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
     }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: #fff0f5cc;
-      backdrop-filter: blur(8px);
+
+      background: rgba(251, 253, 255, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 17px 24px;
+
       display: flex;
       align-items: center;
       gap: 22px;
-      padding: 14px 20px;
-      flex-wrap: wrap;
     }
 
-    .nav strong {
+    .nav-name {
+      margin-right: auto;
+
       color: var(--ink);
-      margin-right: 6px;
+
+      font-weight: 650;
+      letter-spacing: -0.01em;
     }
 
     .nav a {
-      color: var(--accent);
+      color: var(--sub);
+
       text-decoration: none;
-      font-weight: 500;
+
+      font-size: 0.93rem;
+
       transition: color 0.15s ease;
     }
 
     .nav a:hover,
     .nav a.active {
-      color: var(--accent-2);
+      color: var(--blue-dark);
     }
 
-    .spacer {
-      margin-left: auto;
-      color: #a78bfa;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
+
+    /* =========================
+       PAGE
+    ========================= */
 
     main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 840px;
+
+      margin: 0 auto;
+
+      padding: 70px 24px 80px;
     }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .page-intro {
+      padding-bottom: 58px;
+      margin-bottom: 50px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-intro h1 {
+      margin: 0 0 16px;
+
+      color: var(--ink);
+
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 650;
+
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .page-intro p {
+      max-width: 680px;
+
+      margin: 0;
+
+      color: var(--sub);
+
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
 
     .section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: 0 4px 12px var(--shadow);
-      padding: 26px;
-      margin-bottom: 26px;
-    }
+      padding-bottom: 52px;
+      margin-bottom: 52px;
 
-    h1,
-    h2 {
-      margin: 0 0 12px;
-      color: var(--accent);
-      line-height: 1.3;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.35rem;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-      margin-bottom: 18px;
     }
 
-    p {
-      margin: 0 0 14px;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 18px;
-    }
-
-    li:last-child {
+    .section:last-of-type {
+      border-bottom: none;
       margin-bottom: 0;
     }
 
-    .role-title {
+    h2 {
+      margin: 0 0 30px;
+
+      color: var(--blue-dark);
+
+      font-size: 1.25rem;
+      font-weight: 650;
+
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      margin: 0;
+
       color: var(--ink);
-      font-weight: 700;
+
+      font-size: 1.03rem;
+      font-weight: 650;
     }
 
-    .role-meta {
+    p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       ENTRIES
+    ========================= */
+
+    .entry {
+      display: grid;
+
+      grid-template-columns: 145px minmax(0, 1fr);
+
+      gap: 28px;
+
+      margin-bottom: 38px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-date {
+      padding-top: 2px;
+
       color: var(--sub);
-      font-size: 0.95rem;
+
+      font-size: 0.88rem;
+      white-space: nowrap;
     }
 
-    .contact a {
-      color: var(--accent);
+    .entry-content {
+      min-width: 0;
+    }
+
+    .organization {
+      margin-top: 2px;
+
+      color: var(--sub);
+
+      font-size: 0.92rem;
+    }
+
+    .description {
+      max-width: 610px;
+
+      margin-top: 9px;
+
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .text-link {
+      display: inline-block;
+
+      margin-top: 10px;
+
+      color: var(--blue-dark);
+
+      font-size: 0.9rem;
+      font-weight: 500;
+
       text-decoration: none;
     }
 
-    .contact a:hover {
-      color: var(--accent-2);
+    .text-link:hover {
+      text-decoration: underline;
     }
 
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--sub);
+
+      font-size: 0.82rem;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 700px) {
+
       .nav {
         gap: 14px;
+
+        padding: 15px 18px;
+
+        overflow-x: auto;
       }
 
-      .spacer {
-        width: 100%;
-        margin-left: 0;
+      .nav-name {
+        display: none;
       }
 
       main {
-        margin: 28px auto;
+        padding: 48px 20px 60px;
+      }
+
+      .page-intro {
+        padding-bottom: 45px;
+        margin-bottom: 42px;
       }
 
       .section {
-        padding: 22px;
+        padding-bottom: 42px;
+        margin-bottom: 42px;
       }
 
-      h1 {
-        font-size: 1.7rem;
+      .entry {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+
+        margin-bottom: 30px;
       }
+
+      .entry-date {
+        margin-bottom: 2px;
+      }
+
     }
   </style>
 </head>
 
+
 <body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <header>
+
     <nav class="nav">
-      <strong>Erin Ricaloglu</strong>
+
+      <span class="nav-name">
+        Erin Ricaloglu
+      </span>
+
       <a href="index.html">About</a>
       <a href="cv.html">CV</a>
       <a href="mentorship.html">Mentorship</a>
       <a href="outreach.html" class="active">Outreach</a>
       <a href="projects.html">Projects</a>
-      <span class="spacer">University of Toronto</span>
+
     </nav>
+
   </header>
+
 
   <main>
 
-    <!-- INTRO -->
-    <section class="section">
-      <h1>Scientific Outreach & Communication</h1>
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="page-intro">
+
+      <h1>Science & Community</h1>
+
       <p>
-        Alongside research and teaching, I am committed to making science accessible,
-        engaging, and easier to connect with. 
+        I care about making science feel accessible, relevant, and worth
+        being curious about. Outside of the lab, I contribute to STEM
+        outreach, science communication, and initiatives that connect
+        research with students and broader communities.
       </p>
+
     </section>
 
-    <!-- OUTREACH ROLES -->
+
+    <!-- =========================
+         COMMUNITY OUTREACH
+    ========================= -->
+
     <section class="section">
-      <h2>Outreach Roles</h2>
 
-      <ul>
-        <li>
-          <span class="role-title">UTM Coordinator</span>,
-          Let’s Talk Science | Parlons sciences
-          <span class="role-meta">(2025–present)</span><br />
-          Coordinate STEM outreach programs through the University of Toronto Mississauga site,
-          including school visits, community programming, and large-scale youth events.
-          Recruit, train, and support undergraduate volunteers, and help organize activities
-          that make science interactive and approachable for K–12 students.
-        </li>
-        <li>
-          <span class="role-title">Communications Assistant</span>,
-          Women’s Health Research Cluster
-          <span class="role-meta">(2024–present)</span><br />
-          Create accessible science communication materials on women’s health and reproductive
-          justice. Contribute to infographics, social media content, and knowledge mobilization
-          initiatives that translate research for academic and public audiences.
-        </li>
-      </ul>
+      <h2>Community Outreach</h2>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>UTM Coordinator</h3>
+
+          <p class="organization">
+            Let’s Talk Science | Parlons sciences
+          </p>
+
+          <p class="description">
+            Coordinate STEM outreach through the University of Toronto
+            Mississauga site, including school visits, community programming,
+            and large-scale youth events. I also recruit and support
+            undergraduate volunteers who deliver hands-on science programming
+            for K–12 students.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2026
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Brain Bee Presenter</h3>
+
+          <p class="organization">
+            University of Toronto
+          </p>
+
+          <p class="description">
+            Spoke with high school students about neuroscience, research,
+            and my path from undergraduate study to doctoral training,
+            with a focus on making pathways into science feel more
+            approachable.
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <!-- SCIENCE COMMUNICATION AND PRESENTATIONS -->
+
+    <!-- =========================
+         SCIENCE COMMUNICATION
+    ========================= -->
+
     <section class="section">
-      <h2>Science Communication & Presentations</h2>
 
-      <ul>
-        <li>
-          <span class="role-title">Science Communication Blog</span>
-          <span class="role-meta">(2026–present)</span><br />
-          Co-develop a public-facing science blog focused on making research easier to understand
-          without relying on unnecessary jargon. The blog highlights accessible explanations of
-          topics in neuroscience, genomics, health, and biology.
-        </li>
-        <li>
-  <span class="role-title">Graduate Research Trainee Presentation</span>,
-  University of Toronto
-  <span class="role-meta">(2026)</span><br />
-  Presented my first PhD proposal project to graduate students and researchers in the
-  Department of Psychology, sharing the project rationale, research questions, and planned
-  experimental approach.
-</li>
+      <h2>Science Communication</h2>
 
-<li>
-  <span class="role-title">Brain Bee Presenter</span>,
-  University of Toronto
-  <span class="role-meta">(2026)</span><br />
-  Spoke to high school students about my academic journey from high school to doctoral
-  training, sharing experiences in research, neuroscience, and navigating pathways into science.
-</li>
 
-        <li>
-          <span class="role-title">CAMH Research Presentation</span>,
-          University of Toronto Faculty Club
-          <span class="role-meta">(2025)</span><br />
-          Presented summer research on postpartum depression, behavioural neuroscience, and rodent
-          models under the supervision of Dr. Liisa Galea at the Centre for Addiction and Mental Health.
-        </li>
+      <div class="entry">
 
-        <li>
-          <span class="role-title">Ontario Biology Day Presenter</span>
-          <span class="role-meta">(2025)</span><br />
-          Presented honours thesis research on computational ecology to biology students, faculty, and researchers.
-        </li>
+        <div class="entry-date">
+          2024–present
+        </div>
 
-        <li>
-          <span class="role-title">McMaster Undergraduate Research Symposium Presenter</span>
-          <span class="role-meta">(2025)</span><br />
-          Shared honours thesis research with an interdisciplinary undergraduate research audience.
-        </li>
+        <div class="entry-content">
 
-        <li>
-          <span class="role-title">Senior Thesis Presentation</span>,
-          McMaster University
-          <span class="role-meta">(2025)</span><br />
-          Presented thesis findings on how small habitat patches may support biodiversity under equivalent total habitat area; received the highest grade. 
-        </li>
-      </ul>
+          <h3>Communications Assistant</h3>
+
+          <p class="organization">
+            Women’s Health Research Cluster
+          </p>
+
+          <p class="description">
+            Create accessible science communication materials on women’s
+            health and reproductive justice, contributing to digital content,
+            infographics, and knowledge mobilization for academic and public
+            audiences.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2026–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Nerdvana</h3>
+
+          <p class="organization">
+            Science Communication Blog
+          </p>
+
+          <p class="description">
+            Co-develop a public-facing science blog exploring topics across
+            neuroscience, genomics, health, and biology, with an emphasis on
+            explaining research without unnecessary jargon.
+          </p>
+
+          <a
+            class="text-link"
+            href="https://nerdvana.blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Nerdvana →
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      Erin Ricaloglu · University of Toronto
+    </footer>
 
 
   </main>
+
 </body>
 </html>
