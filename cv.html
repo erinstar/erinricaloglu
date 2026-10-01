@@ -2,441 +2,1022 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CV — Erin Ricaloglu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>CV — Erin Ricaloglu</title>
 
   <style>
     :root {
-      --bg1: #fdfbfb;
-      --bg2: #f3e7e9;
-      --ink: #333333;
-      --accent: #6a4c93;
-      --accent-2: #d45d79;
-      --card: #ffffffdd;
-      --line: #e8d6eb;
-      --pill: #fce7f3;
-      --sub: #6b7280;
-      --shadow: rgba(0, 0, 0, 0.05);
+      --bg: #fbfdff;
+      --ink: #25313c;
+      --sub: #71808f;
+
+      --blue: #89c7ea;
+      --blue-dark: #4e96c9;
+      --blue-soft: #eef7fc;
+
+      --line: #dcecf7;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: var(--bg);
       color: var(--ink);
-      line-height: 1.7;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: #fff0f5cc;
-      backdrop-filter: blur(8px);
+
+      background: rgba(251, 253, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 17px 24px;
+
       display: flex;
       align-items: center;
-      gap: 24px;
-      padding: 14px 20px;
-      flex-wrap: wrap;
+      gap: 22px;
     }
 
-    .nav strong {
+    .nav-name {
+      margin-right: auto;
+
       color: var(--ink);
-      margin-right: 6px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
     }
 
     .nav a {
-      color: var(--accent);
+      color: var(--sub);
       text-decoration: none;
-      font-weight: 500;
+      font-size: 0.93rem;
+
       transition: color 0.15s ease;
     }
 
     .nav a:hover,
     .nav a.active {
-      color: var(--accent-2);
+      color: var(--blue-dark);
     }
 
-    .spacer {
-      margin-left: auto;
-      color: #a78bfa;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
+    /* =========================
+       PAGE
+    ========================= */
 
     main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 70px 24px 80px;
     }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .page-intro {
+      margin-bottom: 68px;
+    }
+
+    .page-intro h1 {
+      margin: 0 0 10px;
+
+      color: var(--ink);
+
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 650;
+
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .page-intro p {
+      max-width: 660px;
+      margin: 0;
+
+      color: var(--sub);
+      font-size: 1.03rem;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
 
     .section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: 0 4px 12px var(--shadow);
-      padding: 26px;
-      margin-bottom: 26px;
-    }
+      padding-bottom: 52px;
+      margin-bottom: 52px;
 
-    h1,
-    h2,
-    h3 {
-      color: var(--accent);
-      line-height: 1.3;
-    }
-
-    h1,
-    h2 {
-      margin: 0 0 12px;
-    }
-
-    h2 {
       border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-      margin-bottom: 18px;
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 30px;
+
+      color: var(--blue-dark);
+
+      font-size: 1.25rem;
+      font-weight: 650;
+      letter-spacing: -0.015em;
     }
 
     h3 {
-      margin: 0 0 0.25rem;
-      font-size: 1.1rem;
+      margin: 0;
+
+      color: var(--ink);
+
+      font-size: 1.03rem;
+      font-weight: 650;
     }
 
     p {
-      margin: 0 0 14px;
-    }
-
-    ul {
-      padding-left: 20px;
       margin: 0;
     }
 
-    li {
-      margin-bottom: 12px;
+    /* =========================
+       STANDARD ENTRIES
+    ========================= */
+
+    .entry {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 28px;
+
+      margin-bottom: 36px;
     }
 
-    li:last-child {
+    .entry:last-child {
       margin-bottom: 0;
     }
 
-    .subhead {
+    .entry-date {
+      padding-top: 2px;
+
       color: var(--sub);
-      font-size: 0.95rem;
-      margin-bottom: 14px;
+
+      font-size: 0.88rem;
+      white-space: nowrap;
     }
 
-    .education-list {
-      padding-left: 20px;
+    .entry-content {
+      min-width: 0;
     }
 
-    .education-list li {
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+    .institution {
+      margin-top: 2px;
+
+      color: var(--sub);
+      font-size: 0.93rem;
     }
 
-    .education-list div {
-      margin-top: 0.25rem;
+    .description {
+      max-width: 620px;
+      margin-top: 10px;
+
+      font-size: 0.96rem;
     }
 
-    .experience-item {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1.4rem;
-      border-bottom: 1px solid var(--line);
+    .detail {
+      margin-top: 7px;
+
+      color: var(--sub);
+      font-size: 0.91rem;
     }
 
-    .experience-item:last-child {
-      border-bottom: none;
+    .detail strong {
+      color: var(--ink);
+      font-weight: 550;
+    }
+
+    /* =========================
+       COMPACT ENTRIES
+    ========================= */
+
+    .compact-entry {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 28px;
+
+      margin-bottom: 18px;
+    }
+
+    .compact-entry:last-child {
       margin-bottom: 0;
-      padding-bottom: 0;
     }
 
-    .role-meta {
-      margin: 0 0 0.6rem;
-      color: var(--sub);
-      font-size: 0.95rem;
+    .compact-entry .entry-date {
+      padding-top: 0;
     }
 
-    .skills {
+    .compact-title {
+      font-weight: 600;
+    }
+
+    .compact-org {
       color: var(--sub);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       AWARDS
+    ========================= */
+
+    .award {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 28px;
+
+      margin-bottom: 19px;
+    }
+
+    .award:last-child {
       margin-bottom: 0;
     }
 
-    .pill {
-      display: inline-block;
-      padding: 8px 14px;
-      margin: 6px 8px 0 0;
-      background: var(--pill);
-      border-radius: 999px;
-      color: var(--accent);
-      text-decoration: none;
+    .award-year {
+      color: var(--sub);
+      font-size: 0.88rem;
+    }
+
+    .award-name {
+      font-weight: 600;
+    }
+
+    .award-org {
+      margin-top: 1px;
+
+      color: var(--sub);
+      font-size: 0.91rem;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 44px;
+    }
+
+    .skill-group h3 {
+      margin-bottom: 7px;
+
+      color: var(--ink);
+
+      font-size: 0.96rem;
+    }
+
+    .skill-group p {
+      color: var(--sub);
+
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      padding-top: 8px;
+
+      color: var(--sub);
       font-size: 0.9rem;
     }
 
-    .note {
-      font-size: 0.9rem;
-      color: var(--sub);
-      text-align: right;
-      font-style: italic;
-      margin-bottom: 40px;
-    }
-
-    .note a {
-      color: var(--accent);
+    .contact a {
+      color: var(--blue-dark);
       text-decoration: none;
     }
 
-    .note a:hover {
-      color: var(--accent-2);
+    .contact a:hover {
+      text-decoration: underline;
     }
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
+
       .nav {
         gap: 14px;
+        padding: 15px 18px;
+
+        overflow-x: auto;
       }
 
-      .spacer {
-        width: 100%;
-        margin-left: 0;
+      .nav-name {
+        display: none;
       }
 
       main {
-        margin: 28px auto;
+        padding: 48px 20px 60px;
+      }
+
+      .page-intro {
+        margin-bottom: 52px;
       }
 
       .section {
-        padding: 22px;
+        padding-bottom: 42px;
+        margin-bottom: 42px;
+      }
+
+      .entry,
+      .compact-entry,
+      .award {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .entry {
+        margin-bottom: 30px;
+      }
+
+      .compact-entry,
+      .award {
+        margin-bottom: 18px;
+      }
+
+      .entry-date,
+      .award-year {
+        margin-bottom: 2px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
     }
   </style>
 </head>
 
+
 <body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <header>
     <nav class="nav">
-      <strong>Erin Ricaloglu</strong>
+
+      <span class="nav-name">Erin Ricaloglu</span>
+
       <a href="index.html">About</a>
       <a href="cv.html" class="active">CV</a>
       <a href="mentorship.html">Mentorship</a>
       <a href="outreach.html">Outreach</a>
       <a href="projects.html">Projects</a>
-      <span class="spacer">University of Toronto</span>
+
     </nav>
   </header>
 
+
   <main>
 
-    <!-- EDUCATION -->
-    <section class="section">
-      <h2>Education</h2>
+    <!-- =========================
+         INTRO
+    ========================= -->
 
-      <ul class="education-list">
-        <li>
-          <strong>PhD, Behavioural Neuroscience</strong> — University of Toronto (2025–2030, in progress)
-          <div><strong>Supervisor:</strong> Dr. Iva Zovkic, Department of Psychology</div>
-          <div><strong>Research focus:</strong> Histone variant exchange, chromatin regulation and biology, and memory-related mechanisms in Alzheimer’s disease models.</div>
-          <div><strong>Activities and societies:</strong> Collaborative Specialization in Neuroscience, Brain Bee Speaker, Psychology Graduate Student Association Volunteer.</div>
-        </li>
+    <div class="page-intro">
 
-        <li>
-          <strong>BSc (Honours) Biology, Minor in Sociology</strong> — McMaster University (2021–2025)
-          <div><strong>Exchange:</strong> University of Copenhagen, Ancient Proteomics</div>
-          <div><strong>Honours thesis:</strong> How do small habitat patches support higher biodiversity for an equivalent habitat area?</div>
-          <div><strong>Relevant coursework:</strong> Molecular Biology, Animal Physiology, and Conservation Biology.</div>
-          <div><strong>Activities and societies:</strong> McMaster Welcome Week Biology Representative, Biology Society Events Volunteer, McMaster Outdoor Club.</div>
-        </li>
-      </ul>
-    </section>
+      <h1>Curriculum Vitae</h1>
 
-    <!-- EXPERIENCE -->
-    <section class="section">
-      <h2>Experience</h2>
+      <p>
+        Behavioural neuroscience doctoral researcher at the University of Toronto
+        studying chromatin regulation, lysosomal biology, and memory-related
+        mechanisms in Alzheimer’s disease.
+      </p>
 
-      <div class="experience-item">
-        <h3>Doctoral Student</h3>
-        <p class="role-meta">
-          University of Toronto · Sep 2025–present · Greater Toronto Area, Canada
-        </p>
-        <p>
-          Behavioural Neuroscience PhD student supervised by Dr. Iva Zovkic in the Epi Lab.
-          My research examines how histone variants influence gene regulation in Alzheimer’s disease!
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Transgenic mice, adeno-associated virus, molecular biology, experimental design
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Biological Sciences Representative</h3>
-        <p class="role-meta">
-          University of Toronto · Mar 2026–present · Greater Toronto Area, Canada
-        </p>
-        <p>
-          Review Animal Use Protocols and support ethical oversight of animal-based research
-          as part of university research governance.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Research ethics, animal research oversight
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Teaching Assistant & Invigilator</h3>
-        <p class="role-meta">
-          University of Toronto · Sep 2025–present · Greater Toronto Area, Canada
-        </p>
-        <p>
-          Deliver laboratory and tutorial sessions to support undergraduate learning in the
-          Department of Psychology, including academic support, grading, and exam invigilation.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Mentoring, undergraduate teaching, academic support
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Volunteer Coordinator</h3>
-        <p class="role-meta">
-          Let’s Talk Science | Parlons sciences · Jul 2025–present · University of Toronto
-        </p>
-        <p>
-          Coordinate STEM outreach programs and mentor undergraduate student volunteers across
-          the Greater Toronto Area. Organized a STEM competition at UTM for more than 150 students.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Science communication, community outreach, volunteer coordination
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>CAMH Research Fellow</h3>
-        <p class="role-meta">
-          Centre for Addiction and Mental Health · May 2025–Aug 2025 · Toronto, Ontario
-        </p>
-        <p>
-          Conducted research on postpartum depression under the supervision of Dr. Liisa Galea
-          at CAMH. Presented project findings at the Faculty Club, University of Toronto.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Neuroimaging, rodent models, behavioural neuroscience
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Undergraduate Student Researcher</h3>
-        <p class="role-meta">
-          McMaster University · Apr 2024–Apr 2025 · Hamilton, Ontario
-        </p>
-        <p>
-          Developed Python-based statistical pipelines to analyze biodiversity persistence
-          under the supervision of Dr. Jurek Kolasa. Presented findings at three conferences,
-          including Ontario Biology Day and the McMaster Undergraduate Research Symposium.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Python, statistical analysis, computational ecology, laboratory skills
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Research Assistant</h3>
-        <p class="role-meta">
-          McMaster University · Apr 2023–Mar 2024 · Hamilton, Ontario
-        </p>
-        <p>
-          Assisted graduate research under the supervision of Dr. Robin Cameron, investigating
-          systemic acquired resistance in <em>Arabidopsis thaliana</em>.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> RNA isolation, PCR, plant molecular biology
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Research Intern</h3>
-        <p class="role-meta">
-          Fauna Foundation · Feb 2024–Aug 2024 · Quebec, Canada
-        </p>
-        <p>
-          Completed a research internship in collaboration with Central Washington University,
-          supporting information research related to primate behaviour, welfare, and sanctuary-based care.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Information research, primates, animal welfare
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Technical Campus Coordinator</h3>
-        <p class="role-meta">
-          Shad Canada · May 2024–Jul 2024 · Remote
-        </p>
-        <p>
-          Supported student development in a national STEM and entrepreneurship program,
-          helping coordinate technical project work, student activities, and collaborative learning.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Student development, educational leadership, mentorship
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Field Research Assistant</h3>
-        <p class="role-meta">
-          Operation Wallacea · Jun 2023–Jul 2023 · Cusuco National Park and Tela, Honduras
-        </p>
-        <p>
-          Supported field research activities in tropical conservation settings, contributing to
-          biodiversity monitoring and ecological data collection.
-        </p>
-        <p class="skills">
-          <strong>Skills:</strong> Field work, conservation biology, ecological research
-        </p>
-      </div>
-    </section>
-
-    <!-- AWARDS -->
-    <section class="section">
-      <h2>Awards & Recognition</h2>
-
-      <ul>
-        <li><strong>Graduate Research Trainee Award</strong> — University of Toronto, $1,250 CAD (2026)</li>
-        <li><strong>Psychological and Brain Sciences Graduate Conference Award</strong> — University of Toronto, $500 CAD (2025)</li>
-        <li><strong>BioTalent Canada Student Award</strong> — BioTalent Canada / CAMH, $6,000 CAD (2025)</li>
-        <li><strong>Dean’s Honour List</strong> — McMaster University (2025)</li>
-        <li><strong>Office of Undergraduate Research Travel Award</strong> — McMaster University, $1,000 CAD (2025)</li>
-        <li><strong>McMaster Exchange Ambassador Award</strong> — McMaster University, $1,000 CAD (2023)</li>
-        <li><strong>McMaster Global Experience Award</strong> — McMaster University, $1,000 CAD (2023)</li>
-        <li><strong>Beale-Lincoln-Hall Travel Scholarship</strong> — McMaster University, $1,000 CAD (2023)</li>
-      </ul>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section">
-      <h2>Technical Skills</h2>
-
-      <ul>
-        <li><strong>Molecular & Cellular:</strong> PCR, RNA isolation, DNA extraction, western blotting, immunohistochemistry, ChIP-seq training, AAV-related techniques</li>
-        <li><strong>Animal Models:</strong> Rodent handling, transgenic mouse models, colony management, behavioural assays, stereotaxic surgery, CL2 surgery</li>
-        <li><strong>Computational:</strong> Python, R, NetLogo, data visualization, basic bioinformatics, information research</li>
-        <li><strong>Professional:</strong> Scientific writing, science communication, public outreach, mentoring, research ethics, experimental design, outreach coordination</li>
-      </ul>
-    </section>
-
-    <div class="note">
-      Full CV (PDF) available upon request —
-      <a href="mailto:erin.ricaloglu@mail.utoronto.ca">erin.ricaloglu@mail.utoronto.ca</a>
     </div>
 
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Education</h2>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–2030
+        </div>
+
+        <div class="entry-content">
+
+          <h3>PhD, Behavioural Neuroscience</h3>
+
+          <p class="institution">
+            University of Toronto
+          </p>
+
+          <p class="description">
+            Investigating chromatin regulation in Alzheimer’s disease,
+            with a focus on macroH2A1 histone variants, lysosomal gene
+            programs, and memory-related mechanisms.
+          </p>
+
+          <p class="detail">
+            <strong>Supervisor:</strong> Dr. Iva Zovkic
+          </p>
+
+          <p class="detail">
+            Collaborative Specialization in Neuroscience
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2021–2025
+        </div>
+
+        <div class="entry-content">
+
+          <h3>BSc (Honours) Biology, Minor in Sociology</h3>
+
+          <p class="institution">
+            McMaster University
+          </p>
+
+          <p class="description">
+            Honours thesis examining how small habitat patches support
+            biodiversity across fragmented landscapes.
+          </p>
+
+          <p class="detail">
+            <strong>Exchange:</strong> University of Copenhagen — Ancient Proteomics
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESEARCH
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Research Experience</h2>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Doctoral Researcher</h3>
+
+          <p class="institution">
+            University of Toronto
+          </p>
+
+          <p class="description">
+            Investigating how macroH2A1 histone variants regulate chromatin
+            and lysosomal gene programs in Alzheimer’s disease. This work
+            integrates mouse models, viral manipulation, behavioural neuroscience,
+            molecular biology, and genomic approaches.
+          </p>
+
+          <p class="detail">
+            <strong>Research areas:</strong>
+            Epigenetics, Alzheimer’s disease, chromatin biology, lysosomal biology
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          May–Aug 2025
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Research Fellow</h3>
+
+          <p class="institution">
+            Centre for Addiction and Mental Health
+          </p>
+
+          <p class="description">
+            Investigated antidepressant response in a rodent model of postpartum
+            depression under the supervision of Dr. Liisa Galea. Conducted
+            behavioural and molecular analyses and presented findings at the
+            University of Toronto.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2024–2025
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Undergraduate Researcher</h3>
+
+          <p class="institution">
+            McMaster University
+          </p>
+
+          <p class="description">
+            Developed computational and statistical approaches to investigate
+            biodiversity persistence under the supervision of Dr. Jurek Kolasa.
+            Presented findings at multiple undergraduate and regional research
+            conferences.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2023–2024
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Research Assistant</h3>
+
+          <p class="institution">
+            McMaster University
+          </p>
+
+          <p class="description">
+            Investigated systemic acquired resistance in
+            <em>Arabidopsis thaliana</em> under the supervision of
+            Dr. Robin Cameron.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2024
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Research Intern</h3>
+
+          <p class="institution">
+            Fauna Foundation
+          </p>
+
+          <p class="description">
+            Supported research related to primate behaviour, welfare,
+            and sanctuary-based care in collaboration with Central
+            Washington University.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2023
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Field Research Assistant</h3>
+
+          <p class="institution">
+            Operation Wallacea · Honduras
+          </p>
+
+          <p class="description">
+            Contributed to biodiversity monitoring and ecological data
+            collection in tropical conservation settings.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEACHING + LEADERSHIP
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Teaching, Leadership & Service</h2>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2026–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Biological Sciences Representative</h3>
+
+          <p class="institution">
+            University of Toronto Animal Care Committee
+          </p>
+
+          <p class="description">
+            Review Animal Use Protocols and contribute to the ethical oversight
+            of animal-based research at the University of Toronto.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Teaching Assistant</h3>
+
+          <p class="institution">
+            University of Toronto
+          </p>
+
+          <p class="description">
+            Support undergraduate teaching through laboratory and tutorial
+            instruction, student mentorship, assessment, and grading.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Volunteer Coordinator</h3>
+
+          <p class="institution">
+            Let’s Talk Science
+          </p>
+
+          <p class="description">
+            Coordinate STEM outreach initiatives and mentor undergraduate
+            volunteers across the Greater Toronto Area, including large-scale
+            science outreach events for secondary-school students.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="compact-entry">
+
+        <div class="entry-date">
+          2024
+        </div>
+
+        <div>
+          <div class="compact-title">
+            Technical Campus Coordinator
+          </div>
+
+          <div class="compact-org">
+            Shad Canada
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AWARDS
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Selected Awards</h2>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2026
+        </div>
+
+        <div>
+          <div class="award-name">
+            Graduate Research Trainee Award
+          </div>
+
+          <div class="award-org">
+            University of Toronto
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2025
+        </div>
+
+        <div>
+          <div class="award-name">
+            Psychological and Brain Sciences Graduate Conference Award
+          </div>
+
+          <div class="award-org">
+            University of Toronto
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2025
+        </div>
+
+        <div>
+          <div class="award-name">
+            BioTalent Canada Student Award
+          </div>
+
+          <div class="award-org">
+            BioTalent Canada / Centre for Addiction and Mental Health
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2025
+        </div>
+
+        <div>
+          <div class="award-name">
+            Dean’s Honour List
+          </div>
+
+          <div class="award-org">
+            McMaster University
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2025
+        </div>
+
+        <div>
+          <div class="award-name">
+            Office of Undergraduate Research Travel Award
+          </div>
+
+          <div class="award-org">
+            McMaster University
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2023
+        </div>
+
+        <div>
+          <div class="award-name">
+            McMaster Exchange Ambassador Award
+          </div>
+
+          <div class="award-org">
+            McMaster University
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2023
+        </div>
+
+        <div>
+          <div class="award-name">
+            McMaster Global Experience Award
+          </div>
+
+          <div class="award-org">
+            McMaster University
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="award">
+
+        <div class="award-year">
+          2023
+        </div>
+
+        <div>
+          <div class="award-name">
+            Beale-Lincoln-Hall Travel Scholarship
+          </div>
+
+          <div class="award-org">
+            McMaster University
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Technical Skills</h2>
+
+
+      <div class="skills-grid">
+
+
+        <div class="skill-group">
+
+          <h3>Neuroscience & Animal Models</h3>
+
+          <p>
+            Stereotaxic surgery, transgenic mouse models,
+            rodent handling, behavioural testing,
+            AAV-mediated manipulation, tissue collection
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>Molecular & Genomic</h3>
+
+          <p>
+            PCR, RNA and DNA extraction, western blotting,
+            immunohistochemistry, ChIP-seq, RNA-seq,
+            gene-expression analysis
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>Computational</h3>
+
+          <p>
+            Python, R, statistical analysis,
+            data visualization, bioinformatics
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>Research</h3>
+
+          <p>
+            Experimental design, scientific writing,
+            research ethics, science communication,
+            teaching and mentorship
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <div class="contact">
+
+      Full CV available upon request ·
+
+      <a href="mailto:erin.ricaloglu@mail.utoronto.ca">
+        erin.ricaloglu@mail.utoronto.ca
+      </a>
+
+    </div>
+
+
   </main>
+
 </body>
 </html>
