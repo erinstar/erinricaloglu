@@ -267,89 +267,6 @@
 
 
     /* =========================
-       EXPLORE
-    ========================= */
-
-    .explore-grid {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 14px;
-    }
-
-    .explore-card {
-      padding: 21px;
-
-      border: 1px solid var(--line);
-      border-radius: 10px;
-
-      background: var(--white);
-
-      text-decoration: none;
-      color: var(--ink);
-
-      transition:
-        border-color 0.15s ease,
-        transform 0.15s ease;
-    }
-
-    .explore-card:hover {
-      border-color: var(--blue);
-      transform: translateY(-2px);
-    }
-
-    .explore-card h3 {
-      margin: 0 0 7px;
-
-      color: var(--ink);
-
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .explore-card p {
-      margin: 0;
-
-      color: var(--sub);
-
-      font-size: 0.89rem;
-      line-height: 1.55;
-    }
-
-
-    /* =========================
-       CURRENTLY
-    ========================= */
-
-    .currently {
-      padding: 24px;
-
-      background: var(--blue-soft);
-
-      border: 1px solid var(--line);
-      border-radius: 10px;
-
-      margin-bottom: 50px;
-    }
-
-    .currently h2 {
-      margin: 0 0 10px;
-
-      color: var(--blue-dark);
-
-      font-size: 1.1rem;
-      font-weight: 650;
-    }
-
-    .currently p {
-      margin: 0;
-
-      font-size: 0.94rem;
-    }
-
-
-    /* =========================
        CONTACT
     ========================= */
 
@@ -448,8 +365,7 @@
         font-size: 2.4rem;
       }
 
-      .site-links,
-      .explore-grid {
+      .site-links {
         grid-template-columns: 1fr;
       }
 
@@ -500,7 +416,7 @@
 
     <section class="hero">
 
-      <h1>Hi, I’m Erin ✿</h1>
+      <h1>Hi, I’m Erin!</h1>
 
       <p class="hero-text">
         I am a PhD student in Behavioural Neuroscience at the
@@ -540,88 +456,6 @@
 
 
     <!-- =========================
-         CURRENTLY
-    ========================= -->
-
-    <div class="currently">
-
-      <h2>Currently</h2>
-
-      <p>
-        I am investigating the role of macroH2A1 histone variants in
-        chromatin regulation and lysosomal gene programs in Alzheimer’s
-        disease models.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         EXPLORE
-    ========================= -->
-
-    <section class="section">
-
-      <h2>Explore</h2>
-
-
-      <div class="explore-grid">
-
-
-        <a class="explore-card" href="cv.html">
-
-          <h3>CV</h3>
-
-          <p>
-            Education, research experience, awards,
-            and technical skills.
-          </p>
-
-        </a>
-
-
-        <a class="explore-card" href="projects.html">
-
-          <h3>Research</h3>
-
-          <p>
-            Selected research projects spanning neuroscience,
-            epigenetics, and computational biology.
-          </p>
-
-        </a>
-
-
-        <a class="explore-card" href="mentorship.html">
-
-          <h3>Teaching & Mentorship</h3>
-
-          <p>
-            My teaching experience, mentorship,
-            and approach to supporting students.
-          </p>
-
-        </a>
-
-
-        <a class="explore-card" href="outreach.html">
-
-          <h3>Outreach</h3>
-
-          <p>
-            Science communication, public engagement,
-            and community outreach.
-          </p>
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
          PERSONAL WEBSITES
     ========================= -->
 
@@ -637,7 +471,6 @@
 
 
       <div class="site-links">
-
 
         <a
           class="site-card"
@@ -670,7 +503,6 @@
 
         </a>
 
-
       </div>
 
     </section>
@@ -699,6 +531,7 @@
       </div>
 
 
+      <!-- Your original image -->
       <img
         src="d59ff7121c21c01576bb5ebd2e6b3d0c.jpg"
         alt="Genes to Cells cover"
