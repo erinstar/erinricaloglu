@@ -17,6 +17,7 @@
       --blue-soft: #eef7fc;
 
       --line: #dcecf7;
+      --white: #ffffff;
     }
 
     * {
@@ -29,6 +30,7 @@
 
     body {
       margin: 0;
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -40,8 +42,10 @@
       background: var(--bg);
       color: var(--ink);
       line-height: 1.65;
+
       -webkit-font-smoothing: antialiased;
     }
+
 
     /* =========================
        NAVIGATION
@@ -53,6 +57,7 @@
       z-index: 10;
 
       background: rgba(251, 253, 255, 0.94);
+
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
 
@@ -73,13 +78,16 @@
       margin-right: auto;
 
       color: var(--ink);
+
       font-weight: 650;
       letter-spacing: -0.01em;
     }
 
     .nav a {
       color: var(--sub);
+
       text-decoration: none;
+
       font-size: 0.93rem;
 
       transition: color 0.15s ease;
@@ -90,30 +98,37 @@
       color: var(--blue-dark);
     }
 
+
     /* =========================
        PAGE
     ========================= */
 
     main {
       max-width: 840px;
+
       margin: 0 auto;
+
       padding: 70px 24px 80px;
     }
+
 
     /* =========================
        INTRO
     ========================= */
 
     .page-intro {
-      margin-bottom: 68px;
+      padding-bottom: 58px;
+      margin-bottom: 52px;
+
+      border-bottom: 1px solid var(--line);
     }
 
     .page-intro h1 {
-      margin: 0 0 10px;
+      margin: 0 0 14px;
 
       color: var(--ink);
 
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: clamp(2.2rem, 5vw, 3rem);
       font-weight: 650;
 
       line-height: 1.15;
@@ -121,12 +136,16 @@
     }
 
     .page-intro p {
-      max-width: 660px;
+      max-width: 680px;
+
       margin: 0;
 
       color: var(--sub);
-      font-size: 1.03rem;
+
+      font-size: 1.02rem;
+      line-height: 1.7;
     }
+
 
     /* =========================
        SECTIONS
@@ -151,6 +170,7 @@
 
       font-size: 1.25rem;
       font-weight: 650;
+
       letter-spacing: -0.015em;
     }
 
@@ -167,13 +187,16 @@
       margin: 0;
     }
 
+
     /* =========================
        STANDARD ENTRIES
     ========================= */
 
     .entry {
       display: grid;
+
       grid-template-columns: 145px minmax(0, 1fr);
+
       gap: 28px;
 
       margin-bottom: 36px;
@@ -200,20 +223,24 @@
       margin-top: 2px;
 
       color: var(--sub);
+
       font-size: 0.93rem;
     }
 
     .description {
       max-width: 620px;
+
       margin-top: 10px;
 
-      font-size: 0.96rem;
+      font-size: 0.95rem;
+      line-height: 1.68;
     }
 
     .detail {
       margin-top: 7px;
 
       color: var(--sub);
+
       font-size: 0.91rem;
     }
 
@@ -222,24 +249,23 @@
       font-weight: 550;
     }
 
+
     /* =========================
        COMPACT ENTRIES
     ========================= */
 
     .compact-entry {
       display: grid;
+
       grid-template-columns: 145px minmax(0, 1fr);
+
       gap: 28px;
 
-      margin-bottom: 18px;
+      margin-bottom: 19px;
     }
 
     .compact-entry:last-child {
       margin-bottom: 0;
-    }
-
-    .compact-entry .entry-date {
-      padding-top: 0;
     }
 
     .compact-title {
@@ -248,8 +274,10 @@
 
     .compact-org {
       color: var(--sub);
+
       font-size: 0.92rem;
     }
+
 
     /* =========================
        AWARDS
@@ -257,7 +285,9 @@
 
     .award {
       display: grid;
+
       grid-template-columns: 145px minmax(0, 1fr);
+
       gap: 28px;
 
       margin-bottom: 19px;
@@ -269,6 +299,7 @@
 
     .award-year {
       color: var(--sub);
+
       font-size: 0.88rem;
     }
 
@@ -280,8 +311,10 @@
       margin-top: 1px;
 
       color: var(--sub);
+
       font-size: 0.91rem;
     }
+
 
     /* =========================
        SKILLS
@@ -289,14 +322,14 @@
 
     .skills-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 30px 44px;
     }
 
     .skill-group h3 {
       margin-bottom: 7px;
-
-      color: var(--ink);
 
       font-size: 0.96rem;
     }
@@ -308,6 +341,7 @@
       line-height: 1.65;
     }
 
+
     /* =========================
        CONTACT
     ========================= */
@@ -316,17 +350,37 @@
       padding-top: 8px;
 
       color: var(--sub);
+
       font-size: 0.9rem;
     }
 
     .contact a {
       color: var(--blue-dark);
+
       text-decoration: none;
     }
 
     .contact a:hover {
       text-decoration: underline;
     }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--sub);
+
+      font-size: 0.82rem;
+    }
+
 
     /* =========================
        MOBILE
@@ -336,6 +390,7 @@
 
       .nav {
         gap: 14px;
+
         padding: 15px 18px;
 
         overflow-x: auto;
@@ -350,7 +405,8 @@
       }
 
       .page-intro {
-        margin-bottom: 52px;
+        padding-bottom: 45px;
+        margin-bottom: 42px;
       }
 
       .section {
@@ -362,6 +418,7 @@
       .compact-entry,
       .award {
         grid-template-columns: 1fr;
+
         gap: 3px;
       }
 
@@ -381,8 +438,10 @@
 
       .skills-grid {
         grid-template-columns: 1fr;
+
         gap: 24px;
       }
+
     }
   </style>
 </head>
@@ -395,37 +454,42 @@
   ========================= -->
 
   <header>
+
     <nav class="nav">
 
-      <span class="nav-name">Erin Ricaloglu</span>
+      <span class="nav-name">
+        Erin Ricaloglu
+      </span>
 
       <a href="index.html">About</a>
       <a href="cv.html" class="active">CV</a>
       <a href="mentorship.html">Mentorship</a>
-      <a href="outreach.html">Outreach</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html">Research</a>
 
     </nav>
+
   </header>
 
 
   <main>
 
+
     <!-- =========================
          INTRO
     ========================= -->
 
-    <div class="page-intro">
+    <section class="page-intro">
 
-      <h1>So far...</h1>
+      <h1>The Story So Far</h1>
 
       <p>
-        Behavioural neuroscience doctoral researcher at the University of Toronto
-        studying chromatin regulation, lysosomal biology, and memory-related
-        mechanisms in Alzheimer’s disease.
+        My academic path has taken me from ecology and computational modelling
+        to behavioural neuroscience and epigenetics. Along the way, I have
+        developed interests in research, teaching, science communication,
+        mentorship, and community engagement.
       </p>
 
-    </div>
+    </section>
 
 
     <!-- =========================
@@ -485,12 +549,13 @@
           </p>
 
           <p class="description">
-            Honours thesis examining how small habitat patches support
-            biodiversity across fragmented landscapes.
+            Completed an honours thesis using computational modelling to
+            investigate biodiversity persistence across fragmented landscapes.
           </p>
 
           <p class="detail">
-            <strong>Exchange:</strong> University of Copenhagen — Ancient Proteomics
+            <strong>Exchange:</strong>
+            University of Copenhagen — Ancient Proteomics
           </p>
 
         </div>
@@ -501,7 +566,7 @@
 
 
     <!-- =========================
-         RESEARCH
+         RESEARCH EXPERIENCE
     ========================= -->
 
     <section class="section">
@@ -520,19 +585,15 @@
           <h3>Doctoral Researcher</h3>
 
           <p class="institution">
-            University of Toronto
+            University of Toronto · Zovkic Lab
           </p>
 
           <p class="description">
-            Investigating how macroH2A1 histone variants regulate chromatin
-            and lysosomal gene programs in Alzheimer’s disease. This work
-            integrates mouse models, viral manipulation, behavioural neuroscience,
-            molecular biology, and genomic approaches.
-          </p>
-
-          <p class="detail">
-            <strong>Research areas:</strong>
-            Epigenetics, Alzheimer’s disease, chromatin biology, lysosomal biology
+            Investigate how macroH2A1 histone variants regulate chromatin,
+            gene expression, and lysosomal programs in Alzheimer’s disease.
+            My doctoral work integrates mouse models, targeted viral
+            manipulation, behavioural neuroscience, molecular approaches,
+            and genomic analyses.
           </p>
 
         </div>
@@ -551,14 +612,14 @@
           <h3>Research Fellow</h3>
 
           <p class="institution">
-            Centre for Addiction and Mental Health
+            Centre for Addiction and Mental Health · Galea Lab
           </p>
 
           <p class="description">
-            Investigated antidepressant response in a rodent model of postpartum
-            depression under the supervision of Dr. Liisa Galea. Conducted
-            behavioural and molecular analyses and presented findings at the
-            University of Toronto.
+            Investigated behavioural and cellular responses to antidepressant
+            treatment in a rodent model of postpartum depression, gaining
+            experience in behavioural neuroscience, immunohistochemistry,
+            microscopy, and statistical analysis.
           </p>
 
         </div>
@@ -577,14 +638,14 @@
           <h3>Undergraduate Researcher</h3>
 
           <p class="institution">
-            McMaster University
+            McMaster University · Kolasa Lab
           </p>
 
           <p class="description">
-            Developed computational and statistical approaches to investigate
-            biodiversity persistence under the supervision of Dr. Jurek Kolasa.
-            Presented findings at multiple undergraduate and regional research
-            conferences.
+            Developed agent-based computational models and statistical
+            analyses to investigate biodiversity persistence in fragmented
+            landscapes. Presented the work at multiple undergraduate and
+            regional research conferences.
           </p>
 
         </div>
@@ -603,13 +664,14 @@
           <h3>Research Assistant</h3>
 
           <p class="institution">
-            McMaster University
+            McMaster University · Cameron Lab
           </p>
 
           <p class="description">
-            Investigated systemic acquired resistance in
-            <em>Arabidopsis thaliana</em> under the supervision of
-            Dr. Robin Cameron.
+            Supported molecular biology research investigating systemic
+            acquired resistance in <em>Arabidopsis thaliana</em>, with
+            experience in RNA isolation, PCR, plant molecular biology,
+            and experimental research.
           </p>
 
         </div>
@@ -628,13 +690,12 @@
           <h3>Research Intern</h3>
 
           <p class="institution">
-            Fauna Foundation
+            Fauna Foundation / Central Washington University
           </p>
 
           <p class="description">
-            Supported research related to primate behaviour, welfare,
-            and sanctuary-based care in collaboration with Central
-            Washington University.
+            Contributed to research and information synthesis related to
+            primate behaviour, welfare, and sanctuary-based care.
           </p>
 
         </div>
@@ -657,8 +718,8 @@
           </p>
 
           <p class="description">
-            Contributed to biodiversity monitoring and ecological data
-            collection in tropical conservation settings.
+            Supported field-based biodiversity monitoring and ecological
+            research in tropical conservation settings.
           </p>
 
         </div>
@@ -669,12 +730,37 @@
 
 
     <!-- =========================
-         TEACHING + LEADERSHIP
+         TEACHING, LEADERSHIP & SERVICE
     ========================= -->
 
     <section class="section">
 
       <h2>Teaching, Leadership & Service</h2>
+
+
+      <div class="entry">
+
+        <div class="entry-date">
+          2025–present
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Teaching Assistant & Invigilator</h3>
+
+          <p class="institution">
+            University of Toronto Mississauga
+          </p>
+
+          <p class="description">
+            Support undergraduate teaching across psychology and health
+            sciences through tutorials, classroom activities, assessment,
+            grading, office hours, and individualized academic guidance.
+          </p>
+
+        </div>
+
+      </div>
 
 
       <div class="entry">
@@ -692,8 +778,9 @@
           </p>
 
           <p class="description">
-            Review Animal Use Protocols and contribute to the ethical oversight
-            of animal-based research at the University of Toronto.
+            Review Animal Use Protocols and contribute to the ethical
+            oversight of animal-based research as part of university
+            research governance.
           </p>
 
         </div>
@@ -704,20 +791,22 @@
       <div class="entry">
 
         <div class="entry-date">
-          2025–present
+          2024–present
         </div>
 
         <div class="entry-content">
 
-          <h3>Teaching Assistant</h3>
+          <h3>Communications Assistant</h3>
 
           <p class="institution">
-            University of Toronto
+            Women’s Health Research Cluster
           </p>
 
           <p class="description">
-            Support undergraduate teaching through laboratory and tutorial
-            instruction, student mentorship, assessment, and grading.
+            Develop accessible science communication materials on women’s
+            health and reproductive justice, contributing to digital
+            content, infographics, and knowledge mobilization for academic
+            and public audiences.
           </p>
 
         </div>
@@ -728,21 +817,23 @@
       <div class="entry">
 
         <div class="entry-date">
-          2025–present
+          Jul 2025–Aug 2026
         </div>
 
         <div class="entry-content">
 
-          <h3>Volunteer Coordinator</h3>
+          <h3>UTM Coordinator</h3>
 
           <p class="institution">
-            Let’s Talk Science
+            Let’s Talk Science | Parlons sciences
           </p>
 
           <p class="description">
-            Coordinate STEM outreach initiatives and mentor undergraduate
-            volunteers across the Greater Toronto Area, including large-scale
-            science outreach events for secondary-school students.
+            Coordinated STEM outreach programming at the University of
+            Toronto Mississauga, including school visits, community
+            programming, and large-scale youth events. Recruited, trained,
+            and supported undergraduate volunteers delivering hands-on
+            science programming for K–12 students.
           </p>
 
         </div>
@@ -757,6 +848,7 @@
         </div>
 
         <div>
+
           <div class="compact-title">
             Technical Campus Coordinator
           </div>
@@ -764,6 +856,7 @@
           <div class="compact-org">
             Shad Canada
           </div>
+
         </div>
 
       </div>
@@ -772,7 +865,102 @@
 
 
     <!-- =========================
-         AWARDS
+         MENTORSHIP & EVALUATION
+    ========================= -->
+
+    <section class="section">
+
+      <h2>Mentorship & Evaluation</h2>
+
+
+      <div class="compact-entry">
+
+        <div class="entry-date">
+          2026
+        </div>
+
+        <div>
+
+          <div class="compact-title">
+            Research Proposal Judge
+          </div>
+
+          <div class="compact-org">
+            Alzheimer’s Association Ideathon
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="compact-entry">
+
+        <div class="entry-date">
+          2025
+        </div>
+
+        <div>
+
+          <div class="compact-title">
+            Graduate Judge
+          </div>
+
+          <div class="compact-org">
+            STAR Program · University Health Network
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="compact-entry">
+
+        <div class="entry-date">
+          2025
+        </div>
+
+        <div>
+
+          <div class="compact-title">
+            NASA Space Apps Challenge Judge
+          </div>
+
+          <div class="compact-org">
+            University of Toronto Mississauga
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="compact-entry">
+
+        <div class="entry-date">
+          2024–present
+        </div>
+
+        <div>
+
+          <div class="compact-title">
+            STEM Mentor
+          </div>
+
+          <div class="compact-org">
+            Letters to a Pre-Scientist
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SELECTED AWARDS
     ========================= -->
 
     <section class="section">
@@ -787,6 +975,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             Graduate Research Trainee Award
           </div>
@@ -794,6 +983,7 @@
           <div class="award-org">
             University of Toronto
           </div>
+
         </div>
 
       </div>
@@ -806,6 +996,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             Psychological and Brain Sciences Graduate Conference Award
           </div>
@@ -813,6 +1004,7 @@
           <div class="award-org">
             University of Toronto
           </div>
+
         </div>
 
       </div>
@@ -825,6 +1017,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             BioTalent Canada Student Award
           </div>
@@ -832,6 +1025,7 @@
           <div class="award-org">
             BioTalent Canada / Centre for Addiction and Mental Health
           </div>
+
         </div>
 
       </div>
@@ -844,6 +1038,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             Dean’s Honour List
           </div>
@@ -851,6 +1046,7 @@
           <div class="award-org">
             McMaster University
           </div>
+
         </div>
 
       </div>
@@ -863,6 +1059,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             Office of Undergraduate Research Travel Award
           </div>
@@ -870,6 +1067,7 @@
           <div class="award-org">
             McMaster University
           </div>
+
         </div>
 
       </div>
@@ -882,6 +1080,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             McMaster Exchange Ambassador Award
           </div>
@@ -889,6 +1088,7 @@
           <div class="award-org">
             McMaster University
           </div>
+
         </div>
 
       </div>
@@ -901,6 +1101,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             McMaster Global Experience Award
           </div>
@@ -908,6 +1109,7 @@
           <div class="award-org">
             McMaster University
           </div>
+
         </div>
 
       </div>
@@ -920,6 +1122,7 @@
         </div>
 
         <div>
+
           <div class="award-name">
             Beale-Lincoln-Hall Travel Scholarship
           </div>
@@ -927,6 +1130,7 @@
           <div class="award-org">
             McMaster University
           </div>
+
         </div>
 
       </div>
@@ -935,7 +1139,7 @@
 
 
     <!-- =========================
-         SKILLS
+         TECHNICAL SKILLS
     ========================= -->
 
     <section class="section">
@@ -951,9 +1155,8 @@
           <h3>Neuroscience & Animal Models</h3>
 
           <p>
-            Stereotaxic surgery, transgenic mouse models,
-            rodent handling, behavioural testing,
-            AAV-mediated manipulation, tissue collection
+            Stereotaxic surgery, rodent handling, transgenic mouse models,
+            AAV-mediated manipulation, behavioural testing, tissue collection
           </p>
 
         </div>
@@ -961,12 +1164,23 @@
 
         <div class="skill-group">
 
-          <h3>Molecular & Genomic</h3>
+          <h3>Molecular & Cellular</h3>
 
           <p>
             PCR, RNA and DNA extraction, western blotting,
-            immunohistochemistry, ChIP-seq, RNA-seq,
-            gene-expression analysis
+            immunohistochemistry, confocal microscopy
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>Genomics & Analysis</h3>
+
+          <p>
+            ChIP-seq and RNA-seq workflows, gene-expression analysis,
+            bioinformatics, statistical analysis, data visualization
           </p>
 
         </div>
@@ -977,8 +1191,8 @@
           <h3>Computational</h3>
 
           <p>
-            Python, R, statistical analysis,
-            data visualization, bioinformatics
+            Python, R, NetLogo, agent-based modelling,
+            computational analysis
           </p>
 
         </div>
@@ -986,12 +1200,11 @@
 
         <div class="skill-group">
 
-          <h3>Research</h3>
+          <h3>Research & Communication</h3>
 
           <p>
-            Experimental design, scientific writing,
-            research ethics, science communication,
-            teaching and mentorship
+            Experimental design, scientific writing, research ethics,
+            science communication, teaching, mentorship, and public outreach
           </p>
 
         </div>
@@ -1008,13 +1221,22 @@
 
     <div class="contact">
 
-      Full CV available upon request ·
+      Full academic CV available upon request ·
 
       <a href="mailto:erin.ricaloglu@mail.utoronto.ca">
         erin.ricaloglu@mail.utoronto.ca
       </a>
 
     </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      Erin Ricaloglu · University of Toronto
+    </footer>
 
 
   </main>
