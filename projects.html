@@ -1,88 +1,677 @@
-<!-- =========================
-     PHD RESEARCH
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<section class="project">
+  <title>Research — Erin Ricaloglu</title>
 
-  <p class="project-meta">
-    DOCTORAL RESEARCH · 2025–PRESENT
-  </p>
+  <style>
+    :root {
+      --bg: #fbfdff;
+      --ink: #25313c;
+      --sub: #71808f;
 
-  <h2>
-    Epigenetic Mechanisms in Neurodegenerative Disease
-  </h2>
+      --blue: #89c7ea;
+      --blue-dark: #4e96c9;
+      --blue-soft: #eef7fc;
 
-  <p class="institution">
-    University of Toronto · Zovkic Lab
-  </p>
+      --line: #dcecf7;
+      --white: #ffffff;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
 
-  <div class="project-detail">
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <div class="detail-label">
-      Research Focus
-    </div>
+    body {
+      margin: 0;
 
-    <p class="detail-text">
-      My doctoral research investigates how epigenetic
-      mechanisms influence neuronal function and contribute
-      to neurodegenerative disease. I am particularly
-      interested in the relationship between chromatin
-      regulation, cellular homeostasis, and molecular
-      changes associated with Alzheimer's disease.
-    </p>
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
 
-  </div>
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
 
+      -webkit-font-smoothing: antialiased;
+    }
 
-  <div class="project-detail">
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-    <div class="detail-label">
-      Approach
-    </div>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
 
-    <p class="detail-text">
-      I use an interdisciplinary approach that integrates
-      molecular biology, neuroscience, and genomic
-      techniques to study how changes in gene regulation
-      affect brain function. My work combines experimental
-      and computational methods to explore the molecular
-      mechanisms underlying neurodegeneration.
-    </p>
+      background: rgba(251, 253, 255, 0.94);
 
-  </div>
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
+      border-bottom: 1px solid var(--line);
+    }
 
-  <div class="project-detail">
+    .nav {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 17px 24px;
 
-    <div class="detail-label">
-      Significance
-    </div>
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
 
-    <p class="detail-text">
-      Understanding how epigenetic regulation contributes
-      to neuronal health and disease may provide new
-      insights into the molecular processes associated
-      with neurodegeneration.
-    </p>
+    .nav-name {
+      margin-right: auto;
 
-  </div>
+      color: var(--ink);
 
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
 
-  <div class="methods">
+    .nav a {
+      color: var(--sub);
 
-    <span class="method">Neuroepigenetics</span>
+      text-decoration: none;
 
-    <span class="method">Molecular Neuroscience</span>
+      font-size: 0.93rem;
 
-    <span class="method">Neurodegeneration</span>
+      transition: color 0.15s ease;
+    }
 
-    <span class="method">Gene Regulation</span>
+    .nav a:hover,
+    .nav a.active {
+      color: var(--blue-dark);
+    }
 
-    <span class="method">Genomics</span>
+    /* =========================
+       PAGE
+    ========================= */
 
-    <span class="method">Alzheimer's Disease</span>
+    main {
+      max-width: 840px;
 
-  </div>
+      margin: 0 auto;
 
-</section>
+      padding: 70px 24px 80px;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .page-intro {
+      padding-bottom: 58px;
+      margin-bottom: 54px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-intro h1 {
+      margin: 0 0 16px;
+
+      color: var(--ink);
+
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 650;
+
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .page-intro p {
+      max-width: 690px;
+
+      margin: 0;
+
+      color: var(--sub);
+
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       RESEARCH PROJECTS
+    ========================= */
+
+    .project {
+      padding-bottom: 58px;
+      margin-bottom: 58px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project:last-of-type {
+      margin-bottom: 0;
+
+      border-bottom: none;
+    }
+
+    .project-meta {
+      margin-bottom: 7px;
+
+      color: var(--blue-dark);
+
+      font-size: 0.88rem;
+      font-weight: 600;
+
+      letter-spacing: 0.01em;
+    }
+
+    .project h2 {
+      max-width: 720px;
+
+      margin: 0 0 11px;
+
+      color: var(--ink);
+
+      font-size: 1.55rem;
+      font-weight: 650;
+
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    .institution {
+      margin: 0 0 28px;
+
+      color: var(--sub);
+
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       PROJECT DETAILS
+    ========================= */
+
+    .project-detail {
+      display: grid;
+
+      grid-template-columns: 115px minmax(0, 1fr);
+
+      gap: 24px;
+
+      margin-bottom: 20px;
+    }
+
+    .project-detail:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .detail-label {
+      padding-top: 1px;
+
+      color: var(--blue-dark);
+
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .detail-text {
+      max-width: 590px;
+
+      margin: 0;
+
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       METHODS
+    ========================= */
+
+    .methods {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 27px;
+    }
+
+    .method {
+      padding: 6px 10px;
+
+      background: var(--blue-soft);
+
+      border: 1px solid var(--line);
+      border-radius: 6px;
+
+      color: var(--sub);
+
+      font-size: 0.82rem;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 16px;
+
+      margin-top: 25px;
+    }
+
+    .project-link {
+      color: var(--blue-dark);
+
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--sub);
+
+      font-size: 0.82rem;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .nav {
+        gap: 14px;
+
+        padding: 15px 18px;
+
+        overflow-x: auto;
+      }
+
+      .nav-name {
+        display: none;
+      }
+
+      main {
+        padding: 48px 20px 60px;
+      }
+
+      .page-intro {
+        padding-bottom: 45px;
+        margin-bottom: 45px;
+      }
+
+      .project {
+        padding-bottom: 46px;
+        margin-bottom: 46px;
+      }
+
+      .project h2 {
+        font-size: 1.35rem;
+      }
+
+      .project-detail {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+
+        margin-bottom: 22px;
+      }
+
+      .detail-label {
+        margin-bottom: 2px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header>
+
+    <nav class="nav">
+
+      <span class="nav-name">
+        Erin Ricaloglu
+      </span>
+
+      <a href="index.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="mentorship.html">Mentorship</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="projects.html" class="active">Research</a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="page-intro">
+
+      <h1>Questions I’m Exploring</h1>
+
+      <p>
+        My research interests span neuroscience, epigenetics, and
+        computational approaches to biological questions. I am especially
+        interested in how molecular and cellular processes shape complex
+        biological outcomes, from neuronal function and disease to
+        ecological communities.
+      </p>
+
+    </section>
+
+    <!-- =========================
+         PHD RESEARCH
+    ========================= -->
+
+    <section class="project">
+
+      <p class="project-meta">
+        DOCTORAL RESEARCH · 2025–PRESENT
+      </p>
+
+      <h2>
+        Epigenetic Regulation in Alzheimer's Disease
+      </h2>
+
+      <p class="institution">
+        University of Toronto · Zovkic Lab
+      </p>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Question
+        </div>
+
+        <p class="detail-text">
+          How do epigenetic mechanisms influence neuronal function,
+          and how might changes in chromatin regulation contribute
+          to Alzheimer's disease?
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Approach
+        </div>
+
+        <p class="detail-text">
+          I use experimental and molecular neuroscience approaches
+          to investigate how chromatin regulation influences
+          cellular processes and cognitive function. My research
+          integrates animal models, molecular analyses, and
+          behavioural approaches to better understand the
+          relationship between epigenetic regulation and
+          neurodegenerative disease.
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Why it matters
+        </div>
+
+        <p class="detail-text">
+          Understanding how epigenetic mechanisms contribute to
+          neurodegeneration may provide new insights into the
+          molecular processes underlying Alzheimer's disease
+          and help identify potential avenues for future research.
+        </p>
+
+      </div>
+
+      <div class="methods">
+
+        <span class="method">Epigenetics</span>
+
+        <span class="method">Mouse Models</span>
+
+        <span class="method">Behavioural Neuroscience</span>
+
+        <span class="method">Molecular Biology</span>
+
+        <span class="method">Gene Expression Analysis</span>
+
+        <span class="method">Immunohistochemistry</span>
+
+        <span class="method">Microscopy</span>
+
+        <span class="method">Bioinformatics</span>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         CAMH
+    ========================= -->
+
+    <section class="project">
+
+      <p class="project-meta">
+        RESEARCH FELLOWSHIP · 2025
+      </p>
+
+      <h2>
+        Antidepressant Response in Postpartum Depression
+      </h2>
+
+      <p class="institution">
+        Centre for Addiction and Mental Health · Galea Lab
+      </p>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Question
+        </div>
+
+        <p class="detail-text">
+          How are behavioural and cellular outcomes altered following
+          antidepressant treatment in a rodent model of postpartum
+          depression?
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Approach
+        </div>
+
+        <p class="detail-text">
+          I examined behavioural outcomes alongside brain-region-specific
+          molecular and cellular measures to investigate antidepressant
+          response and neuroinflammatory signalling.
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          What I learned
+        </div>
+
+        <p class="detail-text">
+          This project introduced me to behavioural neuroscience and
+          neurobiological models of disease and helped shape my transition
+          from computational biology into experimental neuroscience.
+        </p>
+
+      </div>
+
+      <div class="methods">
+
+        <span class="method">Rodent models</span>
+
+        <span class="method">Behavioural analysis</span>
+
+        <span class="method">Immunohistochemistry</span>
+
+        <span class="method">Microscopy</span>
+
+        <span class="method">Statistical analysis</span>
+
+      </div>
+
+      <div class="project-links">
+
+        <a
+          class="project-link"
+          href="https://github.com/erinstar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View project materials →
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         HONOURS THESIS
+    ========================= -->
+
+    <section class="project">
+
+      <p class="project-meta">
+        HONOURS THESIS · 2024–2025
+      </p>
+
+      <h2>
+        Biodiversity Persistence in Fragmented Landscapes
+      </h2>
+
+      <p class="institution">
+        McMaster University · Kolasa Lab
+      </p>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Question
+        </div>
+
+        <p class="detail-text">
+          How can small habitat patches support greater biodiversity
+          than larger patches when the total amount of habitat is held
+          constant?
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          Approach
+        </div>
+
+        <p class="detail-text">
+          I developed agent-based computational models to investigate how
+          habitat patch size, connectivity, dispersal, and species
+          characteristics influence biodiversity persistence across
+          fragmented landscapes.
+        </p>
+
+      </div>
+
+      <div class="project-detail">
+
+        <div class="detail-label">
+          What I learned
+        </div>
+
+        <p class="detail-text">
+          This project was my introduction to independent research and
+          computational modelling. It shaped my interest in using
+          quantitative approaches to investigate complex biological
+          systems and gave me experience developing a research question,
+          analytical framework, and computational pipeline independently.
+        </p>
+
+      </div>
+
+      <div class="methods">
+
+        <span class="method">Python</span>
+
+        <span class="method">Agent-based modelling</span>
+
+        <span class="method">NetLogo</span>
+
+        <span class="method">Statistical analysis</span>
+
+        <span class="method">Data visualization</span>
+
+        <span class="method">Computational ecology</span>
+
+      </div>
+
+      <div class="project-links">
+
+        <a
+          class="project-link"
+          href="https://github.com/erinstar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View code & project materials →
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      Erin Ricaloglu · University of Toronto
+    </footer>
+
+  </main>
+
+</body>
+</html>
